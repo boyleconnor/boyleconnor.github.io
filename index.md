@@ -1,3 +1,1 @@
-## Connor Boyle's Website
-
 Welcome to my website! I am Connor Boyle, an M.S. student in Computational Linguistics at the University of Washington. I currently conduct research with [Tao Yu](https://taoyds.github.io/) as part of [Noah's Ark](https://noahs-ark.github.io/) and work with [Thomas Schaffter](https://cd2h.org/index.php/node/124) on [NLP Sandbox](https://nlpsandbox.io/).
