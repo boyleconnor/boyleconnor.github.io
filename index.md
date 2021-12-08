@@ -20,12 +20,18 @@ currently supports two named-entity recognition tasks: named-entity recognition
 
 I helped design the [API schemas][3] and a web client frontend ([live demo][4];
 [source][5]) for NLP Sandbox PHI annotator modules. I trained and containerized
-a BERT-based PHI annotator ([container GitHub][7]; [HuggingFace demo][8]) on
+a BERT-based PHI annotator ([container source][7]; [model demo][8]) on
 the [2014 I2B2 PHI dataset][6] to be benchmarked on NLP Sandbox.
 
 ## Past Projects
 
-To be continued
+### NL-Augmenter
+
+[NL-Augmenter][9] is a collaborative project to create transformations and
+filters for augmenting and processing natural language datasets; it was created
+as an [ACL 2021 workshop][13]. I contributed [two][10] [transformations][11]
+and [one filter][12], as well as multiple bugfixes to the core codebase of the
+project. A co-authored paper is forthcoming.
 
 [1]: https://nlpsandbox.io/
 [2]: https://www.hhs.gov/answers/hipaa/what-is-phi/index.html
@@ -35,3 +41,8 @@ To be continued
 [6]: https://portal.dbmi.hms.harvard.edu/projects/n2c2-nlp/
 [7]: https://github.com/cascadianblue/bert-phi-annotator
 [8]: https://huggingface.co/connorboyle/bert-ner-i2b2
+[9]: https://gem-benchmark.com/nl_augmenter
+[10]: https://github.com/GEM-benchmark/NL-Augmenter/tree/main/transformations/yes_no_question
+[11]: https://github.com/GEM-benchmark/NL-Augmenter/tree/main/transformations/pinyin
+[12]: https://github.com/GEM-benchmark/NL-Augmenter/tree/main/filters/code_mixing
+[13]: https://www.aclweb.org/portal/content/nl-augmenter
