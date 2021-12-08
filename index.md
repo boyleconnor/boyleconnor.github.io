@@ -33,6 +33,15 @@ as an [ACL 2021 workshop][13]. I contributed [two][10] [transformations][11]
 and [one filter][12], as well as multiple bugfixes to the core codebase of the
 project. A co-authored paper is forthcoming.
 
+### Cartograph
+
+[Cartograph][14] ([source][15]) is an interactive semantic-relatedness map of
+Wikipedia articles. The maps are created by generating high-dimensional vectors
+representing hyperlinks between Wikipedia articles, then projecting these
+vectors into 2D space using T-SNE. I contributed to the development of
+Cartograph as an NSF grant-funded undergraduate research assistant to its
+creator, [Shilad Sen][16].
+
 [1]: https://nlpsandbox.io/
 [2]: https://www.hhs.gov/answers/hipaa/what-is-phi/index.html
 [3]: https://github.com/nlpsandbox/nlpsandbox-schemas
@@ -46,3 +55,6 @@ project. A co-authored paper is forthcoming.
 [11]: https://github.com/GEM-benchmark/NL-Augmenter/tree/main/transformations/pinyin
 [12]: https://github.com/GEM-benchmark/NL-Augmenter/tree/main/filters/code_mixing
 [13]: https://www.aclweb.org/portal/content/nl-augmenter
+[14]: http://cartograph.info/
+[15]: https://github.com/shilad/cartograph
+[16]: https://www.macalester.edu/mscs/facultystaff/shiladsen/
