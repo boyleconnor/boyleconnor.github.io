@@ -9,12 +9,6 @@ Schaffter](https://cd2h.org/index.php/node/124) on [NLP Sandbox][1].
 
 ## Current Projects
 
-### UniSKG
-
-I am currently researching methods of encoding structured knowledge for NLP
-tasks, under the supervision of Tao Yu. More details about the project will be
-publicized as our work progresses.
-
 ### NLP Sandbox
 
 [NLP Sandbox][1] is an NLP tool benchmarking project for medical notes. NLP
