@@ -8,7 +8,7 @@ project. At UW, I've worked with [Tao Yu](https://taoyds.github.io/)
 as part of [Noah's Ark](https://noahs-ark.github.io/). I have also worked
 with [Thomas Schaffter](https://cd2h.org/index.php/node/124) on [NLP Sandbox][1].
 
-## Current Projects
+## Selected Past Projects
 
 ### NLP Sandbox
 
@@ -17,8 +17,6 @@ Sandbox allows data sites (hospitals and universities) to securely run and
 evaluate containerized NLP tools on their private datasets. NLP Sandbox
 currently supports two named-entity recognition tasks: named-entity recognition
 (NER) for patient personal information ([PHI][2]) & COVID-19 symptoms.
-
-## Past Projects
 
 ### NL-Augmenter
 
