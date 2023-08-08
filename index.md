@@ -40,7 +40,7 @@ creator, [Shilad Sen][16].
 [3]: https://github.com/nlpsandbox/nlpsandbox-schemas
 [5]: https://github.com/nlpsandbox/phi-deidentifier-app
 [6]: https://portal.dbmi.hms.harvard.edu/projects/n2c2-nlp/
-[7]: https://github.com/cascadianblue/bert-phi-annotator
+[7]: https://github.com/boyleconnor/bert-phi-annotator
 [8]: https://huggingface.co/connorboyle/bert-ner-i2b2
 [9]: https://gem-benchmark.com/nl_augmenter
 [10]: https://github.com/GEM-benchmark/NL-Augmenter/tree/main/transformations/yes_no_question
