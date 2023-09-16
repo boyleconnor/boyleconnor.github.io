@@ -3,7 +3,7 @@ Beijing](https://user-images.githubusercontent.com/6520892/144486930-ed6d1318-b5
 
 I am Connor Boyle, a research programmer at [Information Sciences Institute][17]
 and a recently-graduated M.S. student in Computational Linguistics at the
-University of Washington. At ISI, I work under Marjorie Freedman on the [LESTAT][18]
+University of Washington. At ISI, I worked under Marjorie Freedman on the [LESTAT][18]
 project. At UW, I've worked with [Tao Yu](https://taoyds.github.io/)
 as part of [Noah's Ark](https://noahs-ark.github.io/). I have also worked
 with [Thomas Schaffter](https://cd2h.org/index.php/node/124) on [NLP Sandbox][1].
