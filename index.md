@@ -1,4 +1,4 @@
-![Photo of me at Point Defiance Park in Tacoma, Washington](https://github.com/boyleconnor/boyleconnor.github.io/assets/6520892/6733dec8-c496-44bf-8fd3-984ddae4eb51)
+![Photo of me at Point Defiance Park in Tacoma, Washington](https://github.com/boyleconnor/boyleconnor.github.io/assets/6520892/58fd4cae-c353-4fad-912f-9008221ef3f6)
 
 
 I am Connor Boyle, a former research programmer at [Information Sciences Institute][17]
