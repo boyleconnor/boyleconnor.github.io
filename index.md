@@ -1,7 +1,7 @@
 ![Photo of me at the Summer Palace (颐和园) in
 Beijing](https://user-images.githubusercontent.com/6520892/144486930-ed6d1318-b5ec-4423-8f67-c4bdb7421fa8.jpg)
 
-I am Connor Boyle, a research programmer at [Information Sciences Institute][17]
+I am Connor Boyle, a former research programmer at [Information Sciences Institute][17]
 and a recently-graduated M.S. student in Computational Linguistics at the
 University of Washington. At ISI, I worked under Marjorie Freedman on the [LESTAT][18]
 project. At UW, I've worked with [Tao Yu](https://taoyds.github.io/)
