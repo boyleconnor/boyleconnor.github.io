@@ -1,5 +1,5 @@
-![Photo of me at the Summer Palace (颐和园) in
-Beijing](https://user-images.githubusercontent.com/6520892/144486930-ed6d1318-b5ec-4423-8f67-c4bdb7421fa8.jpg)
+![Photo of me at Point Defiance Park in Tacoma, Washington](https://github.com/boyleconnor/boyleconnor.github.io/assets/6520892/6733dec8-c496-44bf-8fd3-984ddae4eb51)
+
 
 I am Connor Boyle, a former research programmer at [Information Sciences Institute][17]
 and a recently-graduated M.S. student in Computational Linguistics at the
