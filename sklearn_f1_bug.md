@@ -241,9 +241,24 @@ gold examples of Dratini, Exeggutor, and Gengar:
       Gengar       0.00      0.00      0.00         1
 ```
 
+But when we look at the gold labels and predictions we notice that our classifier actually _never_ labels anything as
+"Dratini":
+
+```
+>>> (pokemon_dataset["classifier_1_prediction"] == "Exeggutor").any()
+True
+>>> (pokemon_dataset["classifier_1_prediction"] == "Gengar").any()
+True
+>>> (pokemon_dataset["classifier_1_prediction"] == "Dratini").any()
+False
+```
+
 A wise documentation page once told me, "precision is, intuitively, the ability of a classifier to not label as positive
-a sample that is negative". So, we could 
+a sample that is negative". So, in a very meaningful sense, our classifier is actually perfectly precise.
+
+TO BE CONTINUED
 
 
-
-Joke: "The Mankey's paw has granted our wish"
+<!--
+    Joke: "The Mankey's paw has granted our wish"
+-->
