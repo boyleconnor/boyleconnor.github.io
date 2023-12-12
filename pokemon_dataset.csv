@@ -1,0 +1,765 @@
+,photographer,pokemon,classifier_1_prediction,classifier_2_prediction
+0,Misty,Weezing,Weezing,Weezing
+1,Brock,Kingler,Kingler,Kingler
+2,Brock,Doduo,Ditto,Doduo
+3,Officer Jenny,Growlithe,Growlithe,Snorlax
+4,Brock,Hypno,Horsea,Hypno
+5,Misty,Venonat,Venonat,Clefable
+6,Misty,Rhydon,Rhydon,Primeape
+7,Ash,Slowpoke,Slowpoke,Gastly
+8,Brock,Hypno,Hypno,Hypno
+9,Ash,Diglett,Diglett,Charmeleon
+10,Ash,Venusaur,Kabutops,Lickitung
+11,Brock,Machoke,Machoke,Bellsprout
+12,Professor Oak,Flareon,Flareon,Moltres
+13,Misty,Electabuzz,Electabuzz,Ekans
+14,Misty,Exeggutor,Venusaur,Magnemite
+15,Misty,Seaking,Seaking,Geodude
+16,Misty,Clefairy,Clefairy,Tentacruel
+17,Ash,Ditto,Ditto,Weezing
+18,Ash,Alakazam,Alakazam,Pinsir
+19,Brock,Arcanine,Diglett,Dodrio
+20,Misty,Dratini,Raticate,Clefairy
+21,Brock,Victreebel,Rhydon,Onix
+22,Misty,Jolteon,Jolteon,Lapras
+23,Nurse Joy,Cubone,Cubone,Koffing
+24,Brock,Gyarados,Farfetch'd,Weepinbell
+25,Misty,Exeggcute,Onix,Gengar
+26,Ash,Primeape,Marowak,Staryu
+27,Professor Oak,Rattata,Rattata,Nidorina
+28,Brock,Meowth,Meowth,Farfetch'd
+29,Misty,Venomoth,Venomoth,Kakuna
+30,Professor Oak,Dewgong,Dewgong,Dewgong
+31,Misty,Kabuto,Machop,Tauros
+32,Professor Oak,Cubone,Cubone,Graveler
+33,Nurse Joy,Charmander,Charmander,Haunter
+34,Ash,Squirtle,Electrode,Electabuzz
+35,Professor Oak,Beedrill,Venonat,Hitmonlee
+36,Ash,Mr. Mime,Tauros,Gastly
+37,Misty,Sandslash,Sandslash,Sandslash
+38,Ash,Rhyhorn,Spearow,Doduo
+39,Professor Oak,Seadra,Jigglypuff,Abra
+40,Brock,Venonat,Venonat,Venonat
+41,Brock,Vaporeon,Vaporeon,Krabby
+42,Misty,Dewgong,Dewgong,Wartortle
+43,Professor Oak,Poliwag,Poliwag,Poliwag
+44,Brock,Paras,Paras,Poliwag
+45,Misty,Gyarados,Gyarados,Bellsprout
+46,Nurse Joy,Flareon,Flareon,Exeggutor
+47,Misty,Poliwhirl,Poliwhirl,Seaking
+48,Misty,Machamp,Machamp,Arbok
+49,Brock,Flareon,Flareon,Fearow
+50,Professor Oak,Aerodactyl,Exeggutor,Poliwrath
+51,Brock,Kadabra,Kadabra,Voltorb
+52,Nurse Joy,Staryu,Meowth,Raticate
+53,Misty,Mr. Mime,Mr. Mime,Ninetales
+54,Misty,Seadra,Snorlax,Bulbasaur
+55,Brock,Arcanine,Arcanine,Magikarp
+56,Brock,Blastoise,Charmander,Blastoise
+57,Ash,Machop,Machop,Seaking
+58,Brock,Zubat,Zubat,Nidorina
+59,Nurse Joy,Ponyta,Pidgeotto,Jolteon
+60,Nurse Joy,Jynx,Jynx,Sandshrew
+61,Professor Oak,Kakuna,Mew,Jynx
+62,Misty,Ivysaur,Lickitung,Magneton
+63,Misty,Kadabra,Kadabra,Kadabra
+64,Brock,Pidgeot,Pidgeot,Haunter
+65,Ash,Krabby,Krabby,Farfetch'd
+66,Professor Oak,Lapras,Tentacruel,Porygon
+67,Misty,Paras,Dragonair,Geodude
+68,Brock,Rattata,Dewgong,Rattata
+69,Officer Jenny,Geodude,Geodude,Pidgeot
+70,Brock,Kabuto,Kabuto,Farfetch'd
+71,Professor Oak,Omastar,Omastar,Poliwhirl
+72,Ash,Scyther,Scyther,Kadabra
+73,Nurse Joy,Raichu,Raichu,Hitmonchan
+74,Nurse Joy,Rhyhorn,Rhyhorn,Rhyhorn
+75,Brock,Voltorb,Voltorb,Persian
+76,Brock,Primeape,Bellsprout,Weepinbell
+77,Ash,Electrode,Electrode,Electrode
+78,Officer Jenny,Chansey,Pikachu,Ponyta
+79,Ash,Omanyte,Omanyte,Sandslash
+80,Brock,Weepinbell,Weepinbell,Eevee
+81,Professor Oak,Nidoran♀,Nidoran♀,Vileplume
+82,Ash,Charmander,Butterfree,Pidgeotto
+83,Nurse Joy,Arbok,Arbok,Cubone
+84,Misty,Clefairy,Clefairy,Venomoth
+85,Brock,Grimer,Persian,Grimer
+86,Professor Oak,Moltres,Golem,Articuno
+87,Brock,Paras,Paras,Ninetales
+88,Brock,Raichu,Raichu,Seaking
+89,Professor Oak,Horsea,Horsea,Omastar
+90,Nurse Joy,Voltorb,Kakuna,Goldeen
+91,Ash,Vaporeon,Charmander,Vulpix
+92,Ash,Bellsprout,Golbat,Mr. Mime
+93,Brock,Mewtwo,Mewtwo,Pidgeot
+94,Misty,Vileplume,Vileplume,Metapod
+95,Officer Jenny,Doduo,Doduo,Golduck
+96,Ash,Tauros,Zapdos,Kakuna
+97,Ash,Marowak,Weepinbell,Jynx
+98,Brock,Beedrill,Beedrill,Golduck
+99,Brock,Abra,Abra,Rhydon
+100,Misty,Magnemite,Magnemite,Alakazam
+101,Brock,Pinsir,Pinsir,Nidoran♀
+102,Ash,Tauros,Tauros,Electrode
+103,Brock,Dodrio,Dodrio,Gloom
+104,Brock,Goldeen,Blastoise,Cubone
+105,Professor Oak,Nidorino,Cloyster,Tauros
+106,Professor Oak,Kingler,Kingler,Kingler
+107,Ash,Cubone,Cubone,Persian
+108,Ash,Arcanine,Arcanine,Persian
+109,Professor Oak,Moltres,Moltres,Mewtwo
+110,Ash,Psyduck,Psyduck,Psyduck
+111,Brock,Magikarp,Abra,Geodude
+112,Professor Oak,Doduo,Venomoth,Doduo
+113,Officer Jenny,Wigglytuff,Electrode,Omanyte
+114,Professor Oak,Doduo,Doduo,Hypno
+115,Officer Jenny,Nidorina,Gloom,Venomoth
+116,Professor Oak,Ivysaur,Ivysaur,Krabby
+117,Misty,Magneton,Magneton,Dragonair
+118,Professor Oak,Raichu,Ivysaur,Magneton
+119,Professor Oak,Magneton,Caterpie,Golem
+120,Nurse Joy,Nidoqueen,Pinsir,Machop
+121,Brock,Weedle,Charmeleon,Drowzee
+122,Brock,Zapdos,Zapdos,Cloyster
+123,Officer Jenny,Kingler,Kingler,Graveler
+124,Ash,Beedrill,Gastly,Drowzee
+125,Brock,Lapras,Lapras,Kabutops
+126,Ash,Abra,Abra,Haunter
+127,Ash,Poliwrath,Arcanine,Pikachu
+128,Misty,Magneton,Magneton,Magnemite
+129,Misty,Dragonair,Dragonair,Weezing
+130,Ash,Electrode,Dragonair,Vulpix
+131,Misty,Rapidash,Rapidash,Nidoqueen
+132,Professor Oak,Meowth,Meowth,Charizard
+133,Ash,Magikarp,Magikarp,Shellder
+134,Officer Jenny,Pinsir,Pinsir,Starmie
+135,Ash,Tangela,Tangela,Cloyster
+136,Brock,Venusaur,Venusaur,Beedrill
+137,Misty,Beedrill,Beedrill,Shellder
+138,Brock,Rhyhorn,Rhyhorn,Victreebel
+139,Professor Oak,Mr. Mime,Cloyster,Lapras
+140,Nurse Joy,Charmander,Charmander,Parasect
+141,Professor Oak,Slowbro,Slowbro,Slowbro
+142,Ash,Slowpoke,Slowpoke,Tauros
+143,Misty,Dodrio,Pidgeot,Kabuto
+144,Ash,Flareon,Ditto,Flareon
+145,Officer Jenny,Sandslash,Pidgeot,Spearow
+146,Professor Oak,Gyarados,Gyarados,Dewgong
+147,Professor Oak,Dragonair,Dewgong,Kakuna
+148,Professor Oak,Starmie,Starmie,Starmie
+149,Misty,Nidoqueen,Nidoqueen,Nidoqueen
+150,Brock,Tangela,Persian,Machoke
+151,Brock,Bulbasaur,Bulbasaur,Bulbasaur
+152,Misty,Machop,Machop,Mew
+153,Nurse Joy,Nidoran♀,Nidoran♀,Snorlax
+154,Ash,Spearow,Vulpix,Seadra
+155,Brock,Drowzee,Drowzee,Flareon
+156,Professor Oak,Wigglytuff,Zapdos,Sandslash
+157,Officer Jenny,Magmar,Magmar,Abra
+158,Professor Oak,Nidorino,Dewgong,Zapdos
+159,Brock,Ponyta,Ponyta,Moltres
+160,Professor Oak,Charmander,Meowth,Gastly
+161,Nurse Joy,Moltres,Moltres,Chansey
+162,Nurse Joy,Ekans,Ekans,Ekans
+163,Brock,Diglett,Dragonite,Diglett
+164,Ash,Blastoise,Lickitung,Persian
+165,Professor Oak,Gastly,Gastly,Starmie
+166,Brock,Tentacool,Tentacool,Porygon
+167,Professor Oak,Tentacool,Pikachu,Tentacool
+168,Brock,Dragonite,Dragonite,Tentacruel
+169,Misty,Sandshrew,Arbok,Sandshrew
+170,Brock,Poliwrath,Snorlax,Poliwrath
+171,Officer Jenny,Wigglytuff,Wigglytuff,Ekans
+172,Brock,Venusaur,Venusaur,Moltres
+173,Professor Oak,Charmander,Gengar,Blastoise
+174,Brock,Mankey,Mankey,Seaking
+175,Ash,Victreebel,Victreebel,Mr. Mime
+176,Professor Oak,Jigglypuff,Jigglypuff,Gastly
+177,Brock,Nidorino,Shellder,Omastar
+178,Ash,Psyduck,Psyduck,Butterfree
+179,Ash,Rhydon,Nidoran♀,Caterpie
+180,Brock,Tangela,Tangela,Voltorb
+181,Misty,Nidoqueen,Nidoqueen,Charizard
+182,Misty,Rattata,Hypno,Rattata
+183,Misty,Jynx,Jynx,Metapod
+184,Ash,Raticate,Raticate,Mew
+185,Officer Jenny,Pinsir,Farfetch'd,Bellsprout
+186,Professor Oak,Mankey,Tangela,Beedrill
+187,Misty,Gengar,Kingler,Growlithe
+188,Brock,Zapdos,Zapdos,Articuno
+189,Brock,Oddish,Psyduck,Rhyhorn
+190,Brock,Seaking,Kakuna,Psyduck
+191,Professor Oak,Diglett,Gastly,Tentacool
+192,Professor Oak,Clefairy,Clefairy,Shellder
+193,Ash,Hitmonchan,Hitmonchan,Ekans
+194,Misty,Golbat,Tentacool,Bulbasaur
+195,Professor Oak,Articuno,Articuno,Machamp
+196,Professor Oak,Paras,Meowth,Parasect
+197,Brock,Cubone,Cubone,Cloyster
+198,Brock,Snorlax,Ponyta,Snorlax
+199,Professor Oak,Blastoise,Pidgeot,Blastoise
+200,Officer Jenny,Moltres,Moltres,Venonat
+201,Misty,Nidorino,Moltres,Dragonite
+202,Brock,Mr. Mime,Alakazam,Spearow
+203,Ash,Poliwhirl,Poliwhirl,Poliwhirl
+204,Nurse Joy,Exeggcute,Sandshrew,Starmie
+205,Misty,Aerodactyl,Scyther,Starmie
+206,Ash,Squirtle,Dragonair,Raticate
+207,Professor Oak,Lapras,Lapras,Moltres
+208,Brock,Dodrio,Victreebel,Articuno
+209,Misty,Dragonair,Nidorino,Dragonair
+210,Nurse Joy,Marowak,Marowak,Marowak
+211,Ash,Venonat,Venonat,Staryu
+212,Ash,Scyther,Pidgeot,Dewgong
+213,Brock,Ekans,Ekans,Ekans
+214,Misty,Koffing,Koffing,Omastar
+215,Brock,Porygon,Porygon,Scyther
+216,Nurse Joy,Squirtle,Vulpix,Fearow
+217,Ash,Starmie,Lickitung,Onix
+218,Misty,Tangela,Tangela,Tangela
+219,Ash,Cubone,Cubone,Omastar
+220,Professor Oak,Paras,Nidoran♂,Electabuzz
+221,Brock,Rhyhorn,Vaporeon,Sandshrew
+222,Ash,Kangaskhan,Kangaskhan,Weedle
+223,Brock,Weepinbell,Gyarados,Dugtrio
+224,Professor Oak,Clefairy,Clefairy,Kingler
+225,Misty,Arbok,Victreebel,Metapod
+226,Officer Jenny,Bellsprout,Bellsprout,Wartortle
+227,Misty,Vaporeon,Vaporeon,Sandshrew
+228,Professor Oak,Magneton,Magneton,Paras
+229,Officer Jenny,Voltorb,Tangela,Voltorb
+230,Brock,Poliwag,Poliwag,Lapras
+231,Brock,Seaking,Seaking,Paras
+232,Ash,Jigglypuff,Charizard,Tauros
+233,Ash,Mr. Mime,Mr. Mime,Arcanine
+234,Ash,Scyther,Scyther,Moltres
+235,Professor Oak,Rhyhorn,Rhyhorn,Rhyhorn
+236,Nurse Joy,Horsea,Horsea,Venusaur
+237,Officer Jenny,Staryu,Spearow,Gyarados
+238,Ash,Venusaur,Venusaur,Exeggutor
+239,Professor Oak,Alakazam,Tentacruel,Omastar
+240,Brock,Sandslash,Sandslash,Wigglytuff
+241,Officer Jenny,Parasect,Parasect,Omastar
+242,Nurse Joy,Grimer,Grimer,Aerodactyl
+243,Brock,Eevee,Eevee,Hitmonlee
+244,Officer Jenny,Nidoking,Onix,Magikarp
+245,Ash,Rhydon,Rhydon,Zubat
+246,Ash,Wartortle,Spearow,Magneton
+247,Brock,Dugtrio,Dugtrio,Dugtrio
+248,Professor Oak,Vileplume,Vileplume,Rattata
+249,Brock,Slowbro,Slowbro,Rhydon
+250,Brock,Sandslash,Sandslash,Mankey
+251,Ash,Nidoran♀,Nidoran♀,Tentacool
+252,Ash,Exeggcute,Charmeleon,Primeape
+253,Misty,Rapidash,Kadabra,Vileplume
+254,Misty,Weezing,Weezing,Weezing
+255,Ash,Gyarados,Graveler,Bulbasaur
+256,Ash,Nidoran♀,Bulbasaur,Dratini
+257,Ash,Beedrill,Beedrill,Poliwrath
+258,Professor Oak,Wigglytuff,Golem,Raichu
+259,Misty,Lickitung,Cubone,Kabutops
+260,Brock,Pinsir,Pinsir,Dodrio
+261,Professor Oak,Dewgong,Dewgong,Growlithe
+262,Professor Oak,Dragonite,Dragonite,Magikarp
+263,Ash,Ivysaur,Jynx,Hitmonchan
+264,Ash,Gloom,Pidgeotto,Muk
+265,Misty,Krabby,Hitmonchan,Rhyhorn
+266,Officer Jenny,Ekans,Ekans,Kangaskhan
+267,Brock,Pinsir,Tauros,Golem
+268,Misty,Wigglytuff,Wigglytuff,Weedle
+269,Professor Oak,Aerodactyl,Doduo,Zubat
+270,Nurse Joy,Weezing,Weezing,Starmie
+271,Officer Jenny,Mr. Mime,Weezing,Abra
+272,Professor Oak,Voltorb,Nidoran♂,Voltorb
+273,Brock,Drowzee,Drowzee,Vaporeon
+274,Brock,Beedrill,Beedrill,Slowpoke
+275,Misty,Pikachu,Pikachu,Pikachu
+276,Professor Oak,Butterfree,Butterfree,Ditto
+277,Professor Oak,Weepinbell,Weepinbell,Onix
+278,Misty,Poliwag,Poliwag,Poliwag
+279,Ash,Dragonite,Dragonite,Dugtrio
+280,Professor Oak,Kakuna,Kakuna,Snorlax
+281,Misty,Kakuna,Parasect,Doduo
+282,Brock,Pikachu,Hypno,Moltres
+283,Professor Oak,Lickitung,Lickitung,Jigglypuff
+284,Misty,Pidgeot,Pidgeot,Geodude
+285,Nurse Joy,Machoke,Machoke,Lapras
+286,Ash,Bellsprout,Pikachu,Venonat
+287,Misty,Cloyster,Cloyster,Scyther
+288,Ash,Gastly,Beedrill,Charmander
+289,Professor Oak,Omanyte,Omanyte,Voltorb
+290,Ash,Pidgeotto,Pidgeotto,Omastar
+291,Professor Oak,Slowbro,Lickitung,Tauros
+292,Officer Jenny,Nidorino,Clefairy,Weedle
+293,Professor Oak,Slowpoke,Seadra,Pikachu
+294,Professor Oak,Dratini,Charizard,Dratini
+295,Brock,Farfetch'd,Drowzee,Geodude
+296,Brock,Articuno,Articuno,Kingler
+297,Ash,Electrode,Electrode,Dragonair
+298,Misty,Electabuzz,Electabuzz,Articuno
+299,Officer Jenny,Beedrill,Beedrill,Jynx
+300,Professor Oak,Kabuto,Kabuto,Weezing
+301,Nurse Joy,Nidorina,Ditto,Exeggutor
+302,Ash,Nidoran♂,Nidoran♂,Beedrill
+303,Professor Oak,Jynx,Vileplume,Gengar
+304,Brock,Tentacruel,Tentacruel,Lickitung
+305,Nurse Joy,Nidorina,Charmander,Nidoqueen
+306,Officer Jenny,Spearow,Mew,Rhyhorn
+307,Professor Oak,Chansey,Chansey,Chansey
+308,Misty,Nidoran♀,Nidoran♀,Abra
+309,Professor Oak,Horsea,Mr. Mime,Arbok
+310,Nurse Joy,Machoke,Machoke,Omanyte
+311,Professor Oak,Growlithe,Growlithe,Rhydon
+312,Ash,Bellsprout,Rhyhorn,Dodrio
+313,Ash,Koffing,Magmar,Koffing
+314,Professor Oak,Poliwag,Poliwag,Primeape
+315,Professor Oak,Pidgeot,Bulbasaur,Geodude
+316,Nurse Joy,Oddish,Oddish,Nidoran♀
+317,Ash,Paras,Paras,Exeggutor
+318,Professor Oak,Charmeleon,Charmeleon,Oddish
+319,Professor Oak,Persian,Persian,Fearow
+320,Brock,Aerodactyl,Aerodactyl,Scyther
+321,Professor Oak,Weedle,Weedle,Pikachu
+322,Ash,Shellder,Kingler,Diglett
+323,Brock,Oddish,Oddish,Weezing
+324,Professor Oak,Dratini,Magnemite,Dratini
+325,Misty,Mr. Mime,Mr. Mime,Tentacruel
+326,Professor Oak,Nidorino,Nidorino,Metapod
+327,Ash,Dewgong,Dewgong,Exeggutor
+328,Ash,Rattata,Rattata,Butterfree
+329,Ash,Diglett,Diglett,Diglett
+330,Officer Jenny,Pidgeotto,Arbok,Fearow
+331,Officer Jenny,Charizard,Charizard,Vaporeon
+332,Professor Oak,Wigglytuff,Wigglytuff,Bellsprout
+333,Misty,Golbat,Drowzee,Poliwhirl
+334,Nurse Joy,Mewtwo,Mewtwo,Primeape
+335,Brock,Rapidash,Rapidash,Porygon
+336,Professor Oak,Zapdos,Nidoqueen,Electabuzz
+337,Ash,Weezing,Weezing,Farfetch'd
+338,Ash,Mankey,Kabuto,Marowak
+339,Misty,Nidoking,Nidoking,Metapod
+340,Professor Oak,Tauros,Tauros,Koffing
+341,Professor Oak,Mankey,Mankey,Ekans
+342,Brock,Ditto,Ditto,Ditto
+343,Misty,Goldeen,Seaking,Goldeen
+344,Misty,Zubat,Weezing,Goldeen
+345,Officer Jenny,Victreebel,Victreebel,Beedrill
+346,Nurse Joy,Cloyster,Primeape,Lapras
+347,Professor Oak,Seaking,Seaking,Seaking
+348,Nurse Joy,Raichu,Raichu,Rapidash
+349,Brock,Poliwag,Poliwag,Dragonair
+350,Misty,Electabuzz,Electabuzz,Rhydon
+351,Professor Oak,Porygon,Porygon,Venomoth
+352,Officer Jenny,Blastoise,Blastoise,Scyther
+353,Misty,Koffing,Koffing,Machamp
+354,Professor Oak,Vaporeon,Vaporeon,Weezing
+355,Brock,Jigglypuff,Jigglypuff,Dugtrio
+356,Misty,Omanyte,Weezing,Psyduck
+357,Misty,Wartortle,Wartortle,Kingler
+358,Brock,Victreebel,Victreebel,Seadra
+359,Brock,Machop,Machop,Primeape
+360,Ash,Caterpie,Ekans,Parasect
+361,Officer Jenny,Porygon,Dugtrio,Starmie
+362,Misty,Grimer,Lickitung,Machoke
+363,Misty,Butterfree,Butterfree,Dratini
+364,Misty,Hitmonchan,Hitmonchan,Psyduck
+365,Professor Oak,Zapdos,Zapdos,Magneton
+366,Nurse Joy,Clefable,Clefable,Tangela
+367,Misty,Squirtle,Arcanine,Dragonair
+368,Brock,Sandslash,Sandslash,Kabutops
+369,Nurse Joy,Dragonite,Dragonite,Ivysaur
+370,Ash,Magikarp,Kabuto,Victreebel
+371,Misty,Starmie,Starmie,Starmie
+372,Professor Oak,Kabuto,Kabuto,Diglett
+373,Professor Oak,Vileplume,Vileplume,Gyarados
+374,Officer Jenny,Charmeleon,Charmeleon,Ninetales
+375,Professor Oak,Vileplume,Kadabra,Hitmonchan
+376,Nurse Joy,Gyarados,Blastoise,Muk
+377,Brock,Clefairy,Clefairy,Sandshrew
+378,Professor Oak,Pidgey,Eevee,Gyarados
+379,Misty,Gloom,Gloom,Gloom
+380,Ash,Arcanine,Arcanine,Jigglypuff
+381,Ash,Nidoran♂,Farfetch'd,Rhyhorn
+382,Professor Oak,Jigglypuff,Jigglypuff,Dugtrio
+383,Misty,Nidoran♀,Nidoran♀,Squirtle
+384,Ash,Hitmonchan,Kakuna,Seadra
+385,Professor Oak,Vileplume,Vileplume,Vaporeon
+386,Brock,Dragonite,Dragonite,Arcanine
+387,Ash,Staryu,Staryu,Nidorina
+388,Brock,Wigglytuff,Slowpoke,Drowzee
+389,Nurse Joy,Gloom,Gloom,Nidoran♂
+390,Misty,Pidgeotto,Butterfree,Magmar
+391,Nurse Joy,Venonat,Venonat,Venonat
+392,Ash,Pidgeotto,Dragonite,Staryu
+393,Professor Oak,Pikachu,Pikachu,Moltres
+394,Brock,Arcanine,Arcanine,Zubat
+395,Nurse Joy,Nidoran♂,Nidoran♂,Kingler
+396,Misty,Pikachu,Pikachu,Kabutops
+397,Misty,Slowbro,Slowbro,Golbat
+398,Professor Oak,Doduo,Doduo,Doduo
+399,Ash,Wartortle,Lapras,Seaking
+400,Misty,Hitmonlee,Seadra,Hitmonlee
+401,Nurse Joy,Electrode,Hitmonlee,Electrode
+402,Ash,Cloyster,Gloom,Ivysaur
+403,Misty,Nidoqueen,Fearow,Nidoqueen
+404,Ash,Drowzee,Drowzee,Machamp
+405,Professor Oak,Ekans,Ekans,Exeggutor
+406,Nurse Joy,Zubat,Haunter,Rhyhorn
+407,Ash,Starmie,Starmie,Kakuna
+408,Nurse Joy,Pidgeot,Pidgeot,Pidgey
+409,Nurse Joy,Articuno,Golem,Primeape
+410,Officer Jenny,Kabutops,Kabutops,Jigglypuff
+411,Officer Jenny,Poliwhirl,Poliwhirl,Ninetales
+412,Misty,Sandslash,Weezing,Jynx
+413,Ash,Snorlax,Snorlax,Nidoqueen
+414,Ash,Moltres,Moltres,Koffing
+415,Ash,Arcanine,Arcanine,Drowzee
+416,Misty,Vaporeon,Nidorino,Kangaskhan
+417,Nurse Joy,Shellder,Shellder,Pinsir
+418,Officer Jenny,Fearow,Fearow,Rapidash
+419,Ash,Nidorina,Kabuto,Koffing
+420,Ash,Rhydon,Rhydon,Magneton
+421,Nurse Joy,Cubone,Cubone,Clefairy
+422,Ash,Nidorina,Nidorina,Porygon
+423,Ash,Butterfree,Butterfree,Butterfree
+424,Professor Oak,Slowpoke,Slowpoke,Graveler
+425,Ash,Diglett,Diglett,Flareon
+426,Ash,Slowpoke,Slowpoke,Golbat
+427,Misty,Omanyte,Omanyte,Tentacruel
+428,Misty,Lapras,Lapras,Arcanine
+429,Brock,Voltorb,Voltorb,Weezing
+430,Misty,Weepinbell,Seaking,Doduo
+431,Nurse Joy,Growlithe,Growlithe,Magikarp
+432,Brock,Graveler,Psyduck,Omastar
+433,Officer Jenny,Growlithe,Bellsprout,Rapidash
+434,Misty,Kabuto,Kabuto,Magneton
+435,Professor Oak,Aerodactyl,Aerodactyl,Dodrio
+436,Professor Oak,Jynx,Jynx,Weezing
+437,Ash,Golem,Golem,Venomoth
+438,Brock,Tentacruel,Abra,Clefairy
+439,Misty,Magikarp,Omastar,Ditto
+440,Ash,Lapras,Lapras,Tentacool
+441,Professor Oak,Magikarp,Magikarp,Dugtrio
+442,Brock,Venusaur,Electrode,Goldeen
+443,Professor Oak,Moltres,Moltres,Rapidash
+444,Officer Jenny,Raichu,Raichu,Machop
+445,Ash,Farfetch'd,Farfetch'd,Exeggcute
+446,Misty,Poliwrath,Poliwrath,Koffing
+447,Misty,Tauros,Vaporeon,Butterfree
+448,Ash,Dragonair,Dragonair,Dragonair
+449,Officer Jenny,Dugtrio,Dugtrio,Articuno
+450,Professor Oak,Raticate,Ivysaur,Wigglytuff
+451,Brock,Growlithe,Growlithe,Charmeleon
+452,Officer Jenny,Flareon,Dragonair,Flareon
+453,Misty,Venonat,Butterfree,Articuno
+454,Misty,Electabuzz,Electabuzz,Nidorina
+455,Brock,Staryu,Staryu,Raticate
+456,Professor Oak,Starmie,Starmie,Starmie
+457,Misty,Seel,Seel,Dodrio
+458,Nurse Joy,Dragonite,Weepinbell,Porygon
+459,Brock,Kabuto,Lapras,Dragonair
+460,Nurse Joy,Charizard,Charizard,Charizard
+461,Misty,Bellsprout,Bellsprout,Poliwrath
+462,Misty,Rhydon,Rhydon,Vulpix
+463,Ash,Lapras,Lapras,Pinsir
+464,Ash,Drowzee,Drowzee,Zapdos
+465,Ash,Charmeleon,Charmeleon,Mr. Mime
+466,Professor Oak,Persian,Beedrill,Persian
+467,Nurse Joy,Eevee,Rattata,Ekans
+468,Brock,Pikachu,Pikachu,Grimer
+469,Officer Jenny,Flareon,Arbok,Sandshrew
+470,Officer Jenny,Clefairy,Clefairy,Ekans
+471,Ash,Clefairy,Clefairy,Golem
+472,Professor Oak,Beedrill,Beedrill,Omastar
+473,Brock,Porygon,Porygon,Tentacool
+474,Ash,Hitmonchan,Arbok,Marowak
+475,Brock,Caterpie,Caterpie,Caterpie
+476,Brock,Electabuzz,Electabuzz,Graveler
+477,Brock,Graveler,Graveler,Nidorino
+478,Officer Jenny,Rhyhorn,Rhyhorn,Scyther
+479,Nurse Joy,Mankey,Mankey,Haunter
+480,Ash,Venusaur,Kabutops,Sandslash
+481,Nurse Joy,Tauros,Tauros,Pidgeotto
+482,Officer Jenny,Staryu,Dragonair,Goldeen
+483,Ash,Nidorina,Nidorina,Pidgey
+484,Officer Jenny,Metapod,Metapod,Persian
+485,Misty,Mewtwo,Mewtwo,Nidorina
+486,Ash,Bellsprout,Nidoran♂,Lapras
+487,Professor Oak,Dewgong,Krabby,Dewgong
+488,Officer Jenny,Dodrio,Caterpie,Magnemite
+489,Ash,Caterpie,Caterpie,Gengar
+490,Ash,Electrode,Electrode,Electrode
+491,Professor Oak,Seel,Seel,Sandslash
+492,Brock,Snorlax,Dewgong,Kabutops
+493,Professor Oak,Kabutops,Kabutops,Hitmonchan
+494,Professor Oak,Gloom,Gloom,Moltres
+495,Brock,Parasect,Parasect,Gastly
+496,Ash,Krabby,Machop,Bellsprout
+497,Brock,Cloyster,Cloyster,Pidgeot
+498,Ash,Arcanine,Arcanine,Vulpix
+499,Ash,Dugtrio,Scyther,Arcanine
+500,Misty,Staryu,Staryu,Lickitung
+501,Professor Oak,Mr. Mime,Mr. Mime,Seaking
+502,Brock,Seel,Venomoth,Growlithe
+503,Nurse Joy,Aerodactyl,Krabby,Metapod
+504,Professor Oak,Pidgeotto,Nidoran♀,Staryu
+505,Brock,Haunter,Haunter,Poliwhirl
+506,Nurse Joy,Gyarados,Gyarados,Electrode
+507,Professor Oak,Meowth,Meowth,Exeggcute
+508,Officer Jenny,Voltorb,Bellsprout,Rhyhorn
+509,Professor Oak,Sandshrew,Grimer,Spearow
+510,Nurse Joy,Mew,Mew,Doduo
+511,Brock,Weepinbell,Weepinbell,Kadabra
+512,Brock,Electrode,Electrode,Electrode
+513,Brock,Raticate,Slowbro,Shellder
+514,Ash,Vaporeon,Charizard,Mr. Mime
+515,Brock,Hypno,Rattata,Hypno
+516,Misty,Mr. Mime,Mr. Mime,Machamp
+517,Nurse Joy,Machop,Machop,Eevee
+518,Brock,Gyarados,Hitmonchan,Cubone
+519,Ash,Venusaur,Venusaur,Onix
+520,Brock,Electabuzz,Electabuzz,Pidgeot
+521,Brock,Tentacruel,Tentacruel,Blastoise
+522,Brock,Persian,Persian,Persian
+523,Misty,Omastar,Omastar,Omastar
+524,Brock,Sandshrew,Sandshrew,Pidgeotto
+525,Brock,Venusaur,Tauros,Staryu
+526,Brock,Sandslash,Electrode,Sandslash
+527,Brock,Chansey,Chansey,Seadra
+528,Brock,Machamp,Porygon,Victreebel
+529,Nurse Joy,Koffing,Machop,Seaking
+530,Nurse Joy,Staryu,Staryu,Golem
+531,Brock,Venusaur,Venusaur,Kabuto
+532,Misty,Charizard,Charizard,Charizard
+533,Misty,Zapdos,Zapdos,Golbat
+534,Professor Oak,Gloom,Gloom,Ditto
+535,Officer Jenny,Voltorb,Voltorb,Voltorb
+536,Brock,Primeape,Jynx,Charmeleon
+537,Brock,Shellder,Shellder,Golduck
+538,Nurse Joy,Sandslash,Sandslash,Mankey
+539,Professor Oak,Gastly,Gastly,Aerodactyl
+540,Brock,Krabby,Kabutops,Arbok
+541,Nurse Joy,Venomoth,Magneton,Tauros
+542,Professor Oak,Sandslash,Kabutops,Wigglytuff
+543,Brock,Raichu,Raichu,Arbok
+544,Misty,Seel,Chansey,Moltres
+545,Brock,Flareon,Flareon,Kakuna
+546,Professor Oak,Horsea,Horsea,Nidoran♂
+547,Professor Oak,Kabuto,Kabuto,Shellder
+548,Brock,Arcanine,Bellsprout,Drowzee
+549,Ash,Kingler,Kingler,Ivysaur
+550,Brock,Ponyta,Abra,Marowak
+551,Professor Oak,Mew,Mew,Jolteon
+552,Professor Oak,Dragonite,Beedrill,Venonat
+553,Brock,Aerodactyl,Aerodactyl,Dewgong
+554,Misty,Diglett,Cloyster,Ponyta
+555,Brock,Wartortle,Gastly,Cloyster
+556,Misty,Arbok,Nidorina,Gyarados
+557,Nurse Joy,Arbok,Arbok,Gengar
+558,Officer Jenny,Kabutops,Kabutops,Golduck
+559,Professor Oak,Tentacool,Tentacool,Mewtwo
+560,Ash,Parasect,Parasect,Haunter
+561,Professor Oak,Hitmonlee,Kakuna,Snorlax
+562,Professor Oak,Onix,Onix,Kakuna
+563,Misty,Kingler,Kingler,Chansey
+564,Brock,Raticate,Lapras,Gloom
+565,Misty,Exeggcute,Exeggcute,Pidgeotto
+566,Misty,Bulbasaur,Clefairy,Electrode
+567,Professor Oak,Scyther,Poliwrath,Poliwhirl
+568,Ash,Voltorb,Golduck,Pidgeotto
+569,Nurse Joy,Doduo,Doduo,Doduo
+570,Nurse Joy,Venusaur,Venusaur,Tauros
+571,Misty,Machop,Machop,Tentacruel
+572,Ash,Lapras,Porygon,Graveler
+573,Misty,Kabuto,Kabuto,Nidorina
+574,Misty,Butterfree,Butterfree,Pidgeot
+575,Officer Jenny,Mr. Mime,Rhyhorn,Electrode
+576,Ash,Butterfree,Butterfree,Aerodactyl
+577,Ash,Diglett,Diglett,Wartortle
+578,Ash,Porygon,Omastar,Porygon
+579,Professor Oak,Ivysaur,Gastly,Ivysaur
+580,Professor Oak,Graveler,Nidorino,Geodude
+581,Brock,Drowzee,Seaking,Machamp
+582,Officer Jenny,Ponyta,Dragonite,Slowbro
+583,Misty,Lapras,Lapras,Venomoth
+584,Nurse Joy,Lapras,Lapras,Porygon
+585,Ash,Geodude,Zubat,Machop
+586,Professor Oak,Pidgey,Pidgey,Nidoqueen
+587,Brock,Weedle,Psyduck,Electrode
+588,Misty,Jolteon,Jolteon,Pinsir
+589,Brock,Nidorina,Nidorina,Ponyta
+590,Misty,Abra,Abra,Krabby
+591,Ash,Shellder,Onix,Wigglytuff
+592,Brock,Horsea,Horsea,Golbat
+593,Ash,Growlithe,Growlithe,Vileplume
+594,Ash,Hypno,Hypno,Hypno
+595,Misty,Jynx,Jynx,Gastly
+596,Brock,Bellsprout,Bellsprout,Abra
+597,Nurse Joy,Charizard,Charizard,Charizard
+598,Ash,Seaking,Seaking,Haunter
+599,Professor Oak,Seaking,Seaking,Pinsir
+600,Professor Oak,Ivysaur,Scyther,Poliwhirl
+601,Misty,Vulpix,Vulpix,Tentacruel
+602,Nurse Joy,Hitmonchan,Hitmonchan,Clefable
+603,Nurse Joy,Alakazam,Alakazam,Kangaskhan
+604,Ash,Nidorina,Nidorina,Jigglypuff
+605,Professor Oak,Weezing,Gastly,Weezing
+606,Ash,Diglett,Weedle,Kabutops
+607,Professor Oak,Graveler,Sandshrew,Growlithe
+608,Misty,Koffing,Ponyta,Sandslash
+609,Nurse Joy,Hitmonlee,Marowak,Hitmonlee
+610,Brock,Grimer,Exeggutor,Wigglytuff
+611,Brock,Rattata,Alakazam,Staryu
+612,Nurse Joy,Seaking,Seaking,Seaking
+613,Brock,Beedrill,Beedrill,Scyther
+614,Professor Oak,Zubat,Meowth,Zubat
+615,Professor Oak,Magnemite,Magnemite,Gengar
+616,Officer Jenny,Seel,Seel,Venusaur
+617,Officer Jenny,Omastar,Omastar,Persian
+618,Officer Jenny,Golduck,Golduck,Golduck
+619,Officer Jenny,Mankey,Mankey,Graveler
+620,Ash,Rapidash,Victreebel,Diglett
+621,Misty,Chansey,Butterfree,Arbok
+622,Ash,Weezing,Weezing,Scyther
+623,Brock,Vaporeon,Vaporeon,Rattata
+624,Misty,Metapod,Wartortle,Bellsprout
+625,Brock,Hitmonlee,Hitmonlee,Magikarp
+626,Ash,Machop,Machop,Arcanine
+627,Professor Oak,Poliwag,Nidoqueen,Dragonair
+628,Ash,Squirtle,Squirtle,Staryu
+629,Ash,Victreebel,Raticate,Nidoran♂
+630,Brock,Raticate,Raticate,Paras
+631,Professor Oak,Starmie,Starmie,Mr. Mime
+632,Ash,Nidoqueen,Muk,Rhydon
+633,Professor Oak,Pinsir,Pinsir,Gengar
+634,Misty,Grimer,Grimer,Poliwhirl
+635,Ash,Spearow,Spearow,Rattata
+636,Brock,Sandslash,Seel,Dewgong
+637,Professor Oak,Dragonair,Dragonite,Rhyhorn
+638,Misty,Primeape,Nidoran♂,Gengar
+639,Nurse Joy,Cloyster,Cloyster,Pidgeotto
+640,Ash,Cubone,Cubone,Arcanine
+641,Professor Oak,Alakazam,Marowak,Magikarp
+642,Ash,Venusaur,Venusaur,Mewtwo
+643,Misty,Tangela,Dragonair,Shellder
+644,Professor Oak,Psyduck,Psyduck,Hitmonlee
+645,Brock,Goldeen,Goldeen,Meowth
+646,Officer Jenny,Shellder,Shellder,Snorlax
+647,Brock,Psyduck,Psyduck,Psyduck
+648,Brock,Porygon,Zubat,Geodude
+649,Officer Jenny,Tangela,Jynx,Dugtrio
+650,Misty,Magmar,Poliwag,Seaking
+651,Professor Oak,Zubat,Zubat,Mew
+652,Officer Jenny,Persian,Abra,Persian
+653,Officer Jenny,Scyther,Scyther,Blastoise
+654,Misty,Dragonair,Dragonair,Kakuna
+655,Misty,Fearow,Fearow,Chansey
+656,Ash,Golem,Golem,Kabutops
+657,Professor Oak,Primeape,Wartortle,Rattata
+658,Ash,Jigglypuff,Jigglypuff,Horsea
+659,Nurse Joy,Kangaskhan,Gastly,Cloyster
+660,Brock,Slowbro,Slowbro,Squirtle
+661,Brock,Aerodactyl,Gloom,Gloom
+662,Brock,Seaking,Venusaur,Meowth
+663,Nurse Joy,Vileplume,Vileplume,Koffing
+664,Misty,Metapod,Metapod,Farfetch'd
+665,Officer Jenny,Primeape,Primeape,Pikachu
+666,Officer Jenny,Arbok,Arbok,Mr. Mime
+667,Ash,Cubone,Starmie,Primeape
+668,Officer Jenny,Machop,Jynx,Primeape
+669,Nurse Joy,Kangaskhan,Kangaskhan,Articuno
+670,Misty,Geodude,Geodude,Cubone
+671,Nurse Joy,Rapidash,Koffing,Gastly
+672,Ash,Muk,Muk,Muk
+673,Professor Oak,Oddish,Oddish,Tentacruel
+674,Brock,Muk,Muk,Poliwag
+675,Brock,Aerodactyl,Moltres,Rattata
+676,Ash,Weepinbell,Weepinbell,Vileplume
+677,Officer Jenny,Exeggcute,Parasect,Dodrio
+678,Ash,Beedrill,Beedrill,Nidorino
+679,Misty,Voltorb,Voltorb,Voltorb
+680,Professor Oak,Weepinbell,Weepinbell,Grimer
+681,Misty,Seaking,Seaking,Eevee
+682,Brock,Snorlax,Snorlax,Voltorb
+683,Nurse Joy,Nidoran♂,Nidoran♂,Doduo
+684,Officer Jenny,Drowzee,Graveler,Drowzee
+685,Misty,Tangela,Tangela,Tangela
+686,Misty,Slowpoke,Parasect,Tauros
+687,Professor Oak,Scyther,Scyther,Tangela
+688,Ash,Seadra,Seadra,Pinsir
+689,Professor Oak,Arbok,Raticate,Meowth
+690,Professor Oak,Nidoqueen,Nidoqueen,Alakazam
+691,Officer Jenny,Venusaur,Venusaur,Ponyta
+692,Ash,Raticate,Raticate,Golem
+693,Brock,Charmeleon,Charmeleon,Cubone
+694,Officer Jenny,Ekans,Golem,Ekans
+695,Misty,Charizard,Lickitung,Charizard
+696,Ash,Pidgeot,Pidgeot,Pidgey
+697,Ash,Slowpoke,Mew,Ivysaur
+698,Brock,Squirtle,Squirtle,Weepinbell
+699,Ash,Onix,Mewtwo,Gengar
+700,Ash,Kadabra,Kadabra,Tangela
+701,Nurse Joy,Rapidash,Rapidash,Ekans
+702,Ash,Seadra,Ivysaur,Metapod
+703,Professor Oak,Ekans,Ekans,Pikachu
+704,Misty,Ditto,Ditto,Poliwrath
+705,Professor Oak,Slowpoke,Slowpoke,Dratini
+706,Misty,Grimer,Ivysaur,Nidoqueen
+707,Professor Oak,Muk,Muk,Muk
+708,Misty,Cloyster,Tangela,Omastar
+709,Ash,Venonat,Venonat,Venonat
+710,Brock,Zapdos,Zapdos,Shellder
+711,Ash,Venonat,Venonat,Weedle
+712,Brock,Wigglytuff,Wigglytuff,Rhydon
+713,Ash,Pidgey,Magmar,Rhyhorn
+714,Professor Oak,Blastoise,Blastoise,Exeggutor
+715,Professor Oak,Gyarados,Kabutops,Nidorina
+716,Brock,Squirtle,Squirtle,Exeggcute
+717,Ash,Ekans,Vulpix,Ekans
+718,Misty,Pinsir,Magneton,Pidgeotto
+719,Misty,Blastoise,Abra,Hitmonchan
+720,Nurse Joy,Caterpie,Caterpie,Koffing
+721,Professor Oak,Magmar,Magmar,Aerodactyl
+722,Nurse Joy,Tentacruel,Beedrill,Ditto
+723,Professor Oak,Machoke,Machoke,Machoke
+724,Ash,Nidorino,Lapras,Dragonair
+725,Misty,Weezing,Weezing,Kangaskhan
+726,Ash,Arbok,Arbok,Arbok
+727,Ash,Meowth,Meowth,Caterpie
+728,Ash,Ponyta,Ponyta,Ditto
+729,Officer Jenny,Nidoran♀,Doduo,Dewgong
+730,Misty,Parasect,Ditto,Blastoise
+731,Brock,Psyduck,Psyduck,Marowak
+732,Professor Oak,Psyduck,Psyduck,Psyduck
+733,Professor Oak,Bulbasaur,Nidoran♀,Growlithe
+734,Professor Oak,Gastly,Muk,Clefairy
+735,Misty,Charizard,Charizard,Charizard
+736,Misty,Beedrill,Aerodactyl,Nidoking
+737,Brock,Jigglypuff,Jigglypuff,Koffing
+738,Officer Jenny,Machoke,Machoke,Kabuto
+739,Ash,Poliwag,Jolteon,Poliwag
+740,Ash,Nidoran♀,Nidoran♀,Shellder
+741,Misty,Magnemite,Magnemite,Dragonite
+742,Officer Jenny,Persian,Persian,Electabuzz
+743,Misty,Electabuzz,Electabuzz,Sandslash
+744,Officer Jenny,Electrode,Clefable,Electrode
+745,Ash,Sandslash,Sandslash,Shellder
+746,Professor Oak,Electrode,Electrode,Fearow
+747,Nurse Joy,Muk,Muk,Slowpoke
+748,Nurse Joy,Pidgeot,Fearow,Wigglytuff
+749,Ash,Kabutops,Exeggcute,Dodrio
+750,Professor Oak,Kingler,Kingler,Nidoqueen
+751,Ash,Tangela,Tangela,Jolteon
+752,Ash,Nidorina,Nidorina,Machoke
+753,Misty,Butterfree,Butterfree,Drowzee
+754,Officer Jenny,Squirtle,Squirtle,Machamp
+755,Officer Jenny,Magikarp,Sandslash,Charmander
+756,Ash,Venomoth,Venomoth,Spearow
+757,Professor Oak,Primeape,Persian,Weezing
+758,Ash,Abra,Jynx,Horsea
+759,Nurse Joy,Staryu,Staryu,Venonat
+760,Officer Jenny,Ditto,Flareon,Ditto
+761,Ash,Cloyster,Cloyster,Drowzee
+762,Ash,Golbat,Golbat,Kakuna
+763,Brock,Ninetales,Ninetales,Tentacool
