@@ -7,21 +7,39 @@ dataset). E.g.:
 
 ```
 >>> sklearn.__version__
-'1.2.2'
->>> sklearn.metrics.f1_score(list(range(104)), list(range(100)) + [101, 102, 103, 104], average='macro', zero_division=1.0)
-0.9523809523809523
-```
-
-vs. (the exact same expression)
-
-```
->>> sklearn.__version__
 '1.3.0'
 >>> sklearn.metrics.f1_score(list(range(104)), list(range(100)) + [101, 102, 103, 104], average='macro', zero_division=1.0)
 0.9809523809523809
+>>> # (^incorrect)
 ```
 
-(!!!)
+compare to (the exact same expression):
+
+```
+>>> sklearn.__version__
+'1.2.2'
+>>> sklearn.metrics.f1_score(list(range(104)), list(range(100)) + [101, 102, 103, 104], average='macro', zero_division=1.0)
+0.9523809523809523
+>>> # (^correct)
+```
+
+The bug also affects the just-introduced `zero_division=np.nan`:
+
+```
+>>> sklearn.metrics.f1_score([0, 1], [1, 0], average='macro', zero_division=np.nan)
+nan
+>>> # (^should be 0.0)
+>>> sklearn.metrics.f1_score([0, 1, 2], [1, 0, 2], average='macro', zero_division=np.nan)
+1.0
+>>> # (^should be ~0.67)
+```
+
+Both myself and the Scikit-Learn maintainers consider the behavior in 1.3.X to be incorrect. While a
+[pull request](https://github.com/scikit-learn/scikit-learn/pull/27577) to fix this behavior was just merged, the fix
+has not yet shipped on any released version of Scikit-Learn. Therefore, the easiest solution to this specific problem is
+to revert to Scikit-Learn 1.2.2, or use `zero_division=0.0` if possible, while being careful to understand how this
+parameter change will affect precision, recall, & F-1 (see below for an explainer on the purpose and function of
+the `zero_division` parameter).
 
 ## A classification problem
 
