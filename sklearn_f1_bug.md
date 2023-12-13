@@ -43,6 +43,14 @@ the `zero_division` parameter).
 
 ## A classification problem
 
+In case you're wondering what the `zero_division` parameter is supposed to do, we'll go through an imaginary multi-class
+classification problem. In an effort to try to keep it simple and accessible, I've made it about classifying pictures of
+Pokémon, a type of fictional creature found in the
+[eponymous Japanese media franchise](https://en.wikipedia.org/wiki/Pok%C3%A9mon). The issues in the following example
+could come up in any multi-class classification problem.
+
+### F-1, I choose you
+
 Our friends Ash, Misty, Brock, and others have photographed all 151 original Pokémon for us, and we're going to use that
 nice gold-labeled dataset to train and evaluate some classifiers. Actually, we're going to skip ahead to after we've
 already trained some classifiers, and just evaluate them.
@@ -272,10 +280,168 @@ False
 ```
 
 A wise documentation page once told me, "precision is, intuitively, the ability of a classifier to not label as positive
-a sample that is negative". So, in a very meaningful sense, our classifier is actually perfectly precise.
+a sample that is negative". So, in a very meaningful sense, our classifier is actually perfectly precise at identifying
+Dratini; it never tries to tell us that any other Pokémon is Dratini. Let's set the parameter mentioned in the warning
+message (I'll trim down the output to just a few rows that we're interested in:
+
+```
+>>> print(classification_report(pokemon_dataset["pokemon"], pokemon_dataset["classifier_1_prediction"], zero_division=1.0))
+              precision    recall  f1-score   support
+
+     Dratini       1.00      0.00      0.00         3
+   Exeggutor       0.00      0.00      0.00         1
+      Gengar       0.00      0.00      0.00         1
+
+    accuracy                           0.62       764
+   macro avg       0.64      0.63      0.60       764
+weighted avg       0.67      0.62      0.62       764
+```
+
+Nice, now the classification report correctly shows our classifier's precision on Dratini as 100%. As it happens, this
+has brought our classifier's macro average precision up from 63% to 64%. A small difference, but we had to get it right
+in the first place to know that.
+
+### Dealing with unrepresented classes
+
+Now that I think about it, that Brock guy never seems to open his eyes. Maybe his photos of Pokémon are out-of-focus,
+overexposed, or don't even have the right Pokemon in frame. If that's the case, then our classifier might be doing way
+better overall, but is getting dragged down by Brock's low-quality data. Let's break down those classification reports
+by photographer:
+
+```
+>>> for photographer in set(pokemon_dataset["photographer"]):
+...    subset = pokemon_dataset[pokemon_dataset["photographer"] == photographer]
+...    print(photographer)
+...    print(classification_report(subset["pokemon"], subset["classifier_1_prediction"], zero_division=1.0))
+```
+
+Hmmm, something seems wrong with the output. I'll just show the first few rows of each the classification report for
+each photographer's subset of the data:
+
+```
+Nurse Joy
+              precision    recall  f1-score   support
+
+  Aerodactyl       1.00      0.00      0.00         1
+    Alakazam       1.00      1.00      1.00         1
+       Arbok       1.00      1.00      1.00         2
+         ...        ...       ...       ...       ...
+Brock
+              precision    recall  f1-score   support
+
+        Abra       0.25      1.00      0.40         1
+  Aerodactyl       1.00      0.50      0.67         4
+    Alakazam       0.00      1.00      0.00         0
+         ...        ...       ...       ...       ...
+Professor Oak
+              precision    recall  f1-score   support
+
+  Aerodactyl       1.00      0.33      0.50         3
+    Alakazam       1.00      0.00      0.00         2
+       Arbok       1.00      0.00      0.00         1
+         ...        ...       ...       ...       ...
+Officer Jenny
+              precision    recall  f1-score   support
+
+        Abra       0.00      1.00      0.00         0
+       Arbok       0.33      1.00      0.50         1
+    Beedrill       1.00      1.00      1.00         1
+         ...        ...       ...       ...       ...
+Ash
+              precision    recall  f1-score   support
+
+        Abra       1.00      0.50      0.67         2
+    Alakazam       1.00      1.00      1.00         1
+       Arbok       0.50      1.00      0.67         1
+         ...        ...       ...       ...       ...
+Misty
+              precision    recall  f1-score   support
+
+        Abra       0.50      1.00      0.67         1
+  Aerodactyl       0.00      0.00      0.00         1
+       Arbok       0.00      0.00      0.00         2
+         ...        ...       ...       ...       ...
+```
+
+Hmmm, they all have different Pokémon... but why? Well, for example Nurse Joy didn't take any pictures of Abra, so Abra
+doesn't show up on the classification report for her subset of the photo classification data, skipping straight to
+Aerodactyl. So, the number of classes for each classification report is equal to the number of classes (unique Pokémon)
+photographed by each photographer, right? Wait, no, Brock didn't take any pictures of Alakazam (the `support` is 0), but
+it still shows up on the list. That's because the classifier misclassified some other Pokémon.
+
+So, is this bad? Well, it does seem kind of inconsistent. Notice how our classifier misidentified (at least one of)
+Officer Jenny's photographs as Abra. That means the classifier's 0.0 precision on the Abra class is now factored into
+the average precision for the subset (makes sense). But now the classifier gets considered to have a recall of 1.0 on
+that class.
+
+I mean, it did correctly identify 100% of the 0 gold-label Abra photos correctly as Abra (granted, it would be
+impossible for a classifier to fail that task). The really weird thing to think about is what would happen to average
+recall on this subset if the classifier hadn't misidentified any of our photos as an Abra. The recall on the correct
+Pokémon would go up by several points, but we would lose this entry (Abra) with a 1.0 recall. So, if our classifier did
+slightly better at classifying that Pokémon, our macro average recall would probably go down! That's weird.
+
+We can fix this by using a fixed set of labels for each classification report:
+
+```
+>>> for photographer in set(pokemon_dataset["photographer"]):
+...     subset = pokemon_dataset[pokemon_dataset["photographer"] == photographer]
+...     print(photographer)
+...     print(classification_report(subset["pokemon"], subset["classifier_1_prediction"], labels=sorted(set(pokemon_dataset["pokemon"])), zero_division=1.0))
+```
+
+Shortened output:
+
+```
+Nurse Joy
+              precision    recall  f1-score   support
+
+        Abra       1.00      1.00      1.00         0
+  Aerodactyl       1.00      0.00      0.00         1
+    Alakazam       1.00      1.00      1.00         1
+         ...        ...       ...       ...       ...
+Brock
+              precision    recall  f1-score   support
+
+        Abra       0.25      1.00      0.40         1
+  Aerodactyl       1.00      0.50      0.67         4
+    Alakazam       0.00      1.00      0.00         0
+         ...        ...       ...       ...       ...
+Professor Oak
+              precision    recall  f1-score   support
+
+        Abra       1.00      1.00      1.00         0
+  Aerodactyl       1.00      0.33      0.50         3
+    Alakazam       1.00      0.00      0.00         2
+         ...        ...       ...       ...       ...
+Officer Jenny
+              precision    recall  f1-score   support
+
+        Abra       0.00      1.00      0.00         0
+  Aerodactyl       1.00      1.00      1.00         0
+    Alakazam       1.00      1.00      1.00         0
+         ...        ...       ...       ...       ...
+Ash
+              precision    recall  f1-score   support
+
+        Abra       1.00      0.50      0.67         2
+  Aerodactyl       1.00      1.00      1.00         0
+    Alakazam       1.00      1.00      1.00         1
+         ...        ...       ...       ...       ...
+Misty
+              precision    recall  f1-score   support
+
+        Abra       0.50      1.00      0.67         1
+  Aerodactyl       0.00      0.00      0.00         1
+    Alakazam       1.00      1.00      1.00         0
+         ...        ...       ...       ...       ...
+```
+
+Oh, that's interesting! Look at the `f1-score` for the classes that used to be left of the reports entirely (e.g. "Abra"
+under Nurse Joy). The classifier has 100% precision (it made no positive predictions for the class) and a 100% recall (
+the class has no true positives, so that's free) so therefore the classifier gets a perfect F-1 for each of those
+classes.
 
 TO BE CONTINUED
-
 
 <!--
     Joke: "The Mankey's paw has granted our wish"
