@@ -1,0 +1,13 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+@media (min-width: 1000px) {
+  .wrapper {
+    width: 1000px;
+  }
+  section {
+    width: 700px;
+  }
+}
