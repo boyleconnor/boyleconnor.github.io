@@ -380,7 +380,7 @@ recall on this subset if the classifier hadn't misidentified any of our photos a
 Pokémon would go up by several points, but we would lose this entry (Abra) with a 1.0 recall. So, if our classifier did
 slightly better at classifying that Pokémon, our macro average recall would probably go down! That's weird.
 
-We can fix this by using a fixed set of labels for each classification report:
+We can fix this by using a fixed set of labels for every classification report:
 
 ```
 >>> for photographer in set(pokemon_dataset["photographer"]):
