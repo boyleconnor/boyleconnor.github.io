@@ -437,9 +437,69 @@ Misty
 ```
 
 Oh, that's interesting! Look at the `f1-score` for the classes that used to be left of the reports entirely (e.g. "Abra"
-under Nurse Joy). The classifier has 100% precision (it made no positive predictions for the class) and a 100% recall (
-the class has no true positives, so that's free) so therefore the classifier gets a perfect F-1 for each of those
-classes.
+under Nurse Joy). The classifier has 100% precision (it made no positive predictions for the class) and a 100% recall
+(the class has no gold-label positives, so it gets that "for free") so therefore the classifier gets a perfect F-1 for
+each of those classes. Is this the behavior we want? I think so. If we think of F-1 like a sort of test or trial for a
+classifier, we're giving the classifier an opportunity to get every class "right" or "wrong"; in the case of the
+unrepresented classes, it can either make zero positive predictions and get 100% F-1, or predict some non-zero number of
+the class and get 0% F-1. Notice that just including the full set of labels can affect the macro average F-1 scores:
+
+```
+>>> records = []
+>>> for photographer in set(pokemon_dataset["photographer"]):
+...     subset = pokemon_dataset[pokemon_dataset["photographer"] == photographer]
+...     records.append({
+...         'photographer': photographer,
+...         'f1_no_labels': sklearn.metrics.f1_score(subset["pokemon"], subset["classifier_1_prediction"], zero_division=1.0, average="macro"),
+...         'f1_with_labels': sklearn.metrics.f1_score(subset["pokemon"], subset["classifier_1_prediction"], labels=sorted(set(pokemon_dataset["pokemon"])), zero_division=1.0, average="macro"),
+...         'total_photographs': len(subset)
+...     })
+... 
+>>> print(pandas.DataFrame.from_records(records))
+    photographer  f1_no_labels  f1_with_labels  total_photographs
+0      Nurse Joy      0.537607        0.761148                 76
+1          Brock      0.580801        0.694623                159
+2  Professor Oak      0.510944        0.646973                153
+3  Officer Jenny      0.440639        0.729581                 69
+4            Ash      0.465969        0.589751                166
+5          Misty      0.461817        0.611511                141
+```
+
+Alternatively, we could decide that we want unrepresented classes to always give a score of 0.0, by
+setting `zero_division=0.0`. Predictably, this will drag down the macro average F-1 by a lot in our subsets (I'll just
+show the report for the classifier on Nurse Joy's photographs):
+
+```
+>>> subset = pokemon_dataset[pokemon_dataset["photographer"] == "Nurse Joy"]
+>>> print(sklearn.metrics.classification_report(subset["pokemon"], subset["classifier_1_prediction"], labels=sorted(set(pokemon_dataset["pokemon"])), zero_division=1.0))
+              precision    recall  f1-score   support
+
+        Abra       1.00      1.00      1.00         0
+  Aerodactyl       1.00      0.00      0.00         1
+    Alakazam       1.00      1.00      1.00         1
+         ...        ...       ...       ...       ...
+
+   micro avg       0.70      0.70      0.70        76
+   macro avg       0.86      0.88      0.76        76
+weighted avg       0.95      0.70      0.71        76
+
+>>> print(sklearn.metrics.classification_report(subset["pokemon"], subset["classifier_1_prediction"], labels=sorted(set(pokemon_dataset["pokemon"])), zero_division=0.0))
+              precision    recall  f1-score   support
+
+        Abra       0.00      0.00      0.00         0
+  Aerodactyl       0.00      0.00      0.00         1
+    Alakazam       1.00      1.00      1.00         1
+         ...        ...       ...       ...       ...
+
+   micro avg       0.70      0.70      0.70        76
+   macro avg       0.29      0.28      0.28        76
+weighted avg       0.77      0.70      0.71        76
+
+```
+
+That seems like a clearly worse way to evaluate the classifier on a subset; its F-1 will have a ceiling equal to the
+share of unique Pokémon present in that subset's gold labels. For example, Nurse Joy only photographed 60 unique
+Pokémon, so the best possible F-1 the classifier could get on the subset is equal to $$\frac{60}{151} \approx 0.397$$.
 
 TO BE CONTINUED
 
