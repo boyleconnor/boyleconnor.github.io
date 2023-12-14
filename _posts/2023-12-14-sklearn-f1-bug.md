@@ -48,8 +48,8 @@ both `0.0` (which is *not* the desired behavior for the `zero_division` paramete
 
 ## A classification problem
 
-I think a lot of people don't know understand what the `zero_division` parameter is supposed to do, so we'll go through
-a hypothetical multi-class classification problem. In an effort to try to keep it simple and accessible, I've made this
+I think a lot of people don't understand what the `zero_division` parameter is supposed to do, so we'll go through a
+hypothetical multi-class classification problem. In an effort to try to keep it simple and accessible, I've made this
 imaginary machine learning project about classifying pictures of Pokémon, a type of fictional creature found in
 the [eponymous Japanese media franchise](https://en.wikipedia.org/wiki/Pok%C3%A9mon). The issues in the following
 example could come up in *any* multi-class classification problem.
@@ -605,8 +605,8 @@ and c) there is exactly zero overlap between those two sets.
 Essentially, in Scikit-Learn 1.3.0, the `zero_division` parameter was turned into a kind of
 [Mankey](https://bulbapedia.bulbagarden.net/wiki/Mankey_(Pok%C3%A9mon))'s
 [paw](https://en.wiktionary.org/wiki/monkey%27s_paw) that determines the behavior of *all*
-zero-division anywhere in the process of calculating F-1. This leads to the totally nonsensical behavior, such as giving
-an F-1 of 100% to a classifier that gets literally every example wrong:
+zero-division anywhere in the process of calculating F-1. This leads to totally nonsensical behavior, such as giving an
+F-1 of 100% to a classifier that gets literally every example wrong:
 
 ```
 >>> sklearn.metrics.f1_score([0, 1, 0], [1, 0, 1], zero_division=1.0)
