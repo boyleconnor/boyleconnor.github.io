@@ -44,12 +44,12 @@ the `zero_division` parameter).
 ## A classification problem
 
 In case you're wondering what the `zero_division` parameter is supposed to do, we'll go through an imaginary multi-class
-classification problem. In an effort to try to keep it simple and accessible, I've made it about classifying pictures of
-Pokémon, a type of fictional creature found in the
+classification problem. In an effort to try to keep it simple and accessible, I've made this hypothetical machine
+learning project about classifying pictures of Pokémon, a type of fictional creature found in the
 [eponymous Japanese media franchise](https://en.wikipedia.org/wiki/Pok%C3%A9mon). The issues in the following example
 could come up in any multi-class classification problem.
 
-### F-1, I choose you
+### F-1, I choose you!
 
 Our friends Ash, Misty, Brock, and others have photographed all 151 original Pokémon for us, and we're going to use that
 nice gold-labeled dataset to train and evaluate some classifiers. Actually, we're going to skip ahead to after we've
@@ -544,7 +544,8 @@ around:
 
 Nice! The newer classifier looks like a very strong improvement. Let's rush to deploy it quickly without asking any more
 questions. Except... did the F-1 for classifier #1 go up since we last checked? It looks to be about 1 percentage point
-higher than what we calculated before at 0.60. How did that happen? Well, we are using a new version of Scikit-Learn:
+higher than what we calculated before at 0.60. The predictions are all the same, so how did that happen? Well, we are
+using a new version of Scikit-Learn:
 
 ```
 >>> sklearn.__version__
@@ -552,8 +553,8 @@ higher than what we calculated before at 0.60. How did that happen? Well, we are
 ```
 
 Maybe there's some new implementation detail that changed the order of operations, so it's producing a different
-rounding error? That seems like a really big difference, though. I'm getting a little nervous now; let's just look at a
-class-by-class classification report for the new classifier:
+rounding error? That seems like a *really* big difference, though. I'm getting a little nervous now; let's just look at a
+full classification report for the new classifier:
 
 ```
 >>> print(sklearn.metrics.classification_report(pokemon_dataset["pokemon"], pokemon_dataset["classifier_2_prediction"], zero_division=1.0))
@@ -563,161 +564,63 @@ class-by-class classification report for the new classifier:
   Aerodactyl       0.00      0.00      1.00         9
     Alakazam       0.00      0.00      1.00         4
        Arbok       0.17      0.14      0.15         7
-    Arcanine       0.00      0.00      1.00         8
-    Articuno       0.00      0.00      1.00         3
-    Beedrill       0.00      0.00      1.00        11
-  Bellsprout       0.00      0.00      1.00         7
-   Blastoise       0.33      0.33      0.33         6
-   Bulbasaur       0.25      0.33      0.29         3
-  Butterfree       0.25      0.17      0.20         6
-    Caterpie       0.33      0.25      0.29         4
-     Chansey       0.25      0.25      0.25         4
-   Charizard       0.71      0.83      0.77         6
-  Charmander       0.00      0.00      1.00         5
-  Charmeleon       0.00      0.00      1.00         4
-    Clefable       0.00      0.00      1.00         1
-    Clefairy       0.00      0.00      1.00         7
-    Cloyster       0.00      0.00      1.00         7
-      Cubone       0.00      0.00      1.00         8
-     Dewgong       0.29      0.40      0.33         5
-     Diglett       0.40      0.25      0.31         8
-       Ditto       0.29      0.50      0.36         4
-      Dodrio       0.00      0.00      1.00         4
-       Doduo       0.44      0.67      0.53         6
-   Dragonair       0.22      0.33      0.27         6
-   Dragonite       0.00      0.00      1.00         7
-     Dratini       0.40      0.67      0.50         3
-     Drowzee       0.12      0.17      0.14         6
-     Dugtrio       0.14      0.33      0.20         3
-       Eevee       0.00      0.00      1.00         2
-       Ekans       0.36      0.57      0.44         7
-  Electabuzz       0.00      0.00      1.00         7
-   Electrode       0.50      0.62      0.56         8
-   Exeggcute       0.00      0.00      1.00         5
-   Exeggutor       0.00      0.00      1.00         1
-  Farfetch'd       0.00      0.00      1.00         2
-      Fearow       0.00      0.00      1.00         2
-     Flareon       0.50      0.29      0.36         7
-      Gastly       0.00      0.00      1.00         4
-      Gengar       0.00      0.00      1.00         1
-     Geodude       0.00      0.00      1.00         3
-       Gloom       0.25      0.20      0.22         5
-      Golbat       0.00      0.00      1.00         3
-     Goldeen       0.20      0.33      0.25         3
-     Golduck       0.20      1.00      0.33         1
-       Golem       0.00      0.00      1.00         2
-    Graveler       0.00      0.00      1.00         4
-      Grimer       0.33      0.17      0.22         6
-   Growlithe       0.00      0.00      1.00         6
-    Gyarados       0.00      0.00      1.00         8
-     Haunter       0.00      0.00      1.00         1
-  Hitmonchan       0.00      0.00      1.00         5
-   Hitmonlee       0.40      0.50      0.44         4
-      Horsea       0.00      0.00      1.00         5
-       Hypno       0.80      1.00      0.89         4
-     Ivysaur       0.20      0.20      0.20         5
-  Jigglypuff       0.00      0.00      1.00         6
-     Jolteon       0.00      0.00      1.00         2
-        Jynx       0.00      0.00      1.00         5
-      Kabuto       0.00      0.00      1.00         8
-    Kabutops       0.00      0.00      1.00         4
-     Kadabra       0.33      0.33      0.33         3
-      Kakuna       0.00      0.00      1.00         3
-  Kangaskhan       0.00      0.00      1.00         3
-     Kingler       0.33      0.33      0.33         6
-     Koffing       0.11      0.20      0.14         5
-      Krabby       0.00      0.00      1.00         4
-      Lapras       0.00      0.00      1.00         9
-   Lickitung       0.00      0.00      1.00         2
-     Machamp       0.00      0.00      1.00         2
-     Machoke       0.25      0.20      0.22         5
-      Machop       0.00      0.00      1.00         7
-    Magikarp       0.00      0.00      1.00         6
-      Magmar       0.00      0.00      1.00         3
-   Magnemite       0.00      0.00      1.00         3
-    Magneton       0.00      0.00      1.00         4
-      Mankey       0.00      0.00      1.00         6
-     Marowak       0.20      0.50      0.29         2
-      Meowth       0.00      0.00      1.00         4
-     Metapod       0.00      0.00      1.00         3
-         Mew       0.00      0.00      1.00         2
-      Mewtwo       0.00      0.00      1.00         3
-     Moltres       0.00      0.00      1.00         6
-    Mr. Mime       0.00      0.00      1.00        10
-         Muk       0.50      0.50      0.50         4
-    Nidoking       0.00      0.00      1.00         2
-   Nidoqueen       0.25      0.33      0.29         6
-    Nidoran♀       0.00      0.00      1.00         8
-    Nidoran♂       0.00      0.00      1.00         4
-    Nidorina       0.00      0.00      1.00         9
-    Nidorino       0.00      0.00      1.00         7
-   Ninetales       0.00      0.00      1.00         1
-      Oddish       0.00      0.00      1.00         4
-     Omanyte       0.00      0.00      1.00         4
-     Omastar       0.09      0.33      0.14         3
-        Onix       0.00      0.00      1.00         2
-       Paras       0.00      0.00      1.00         6
-    Parasect       0.00      0.00      1.00         4
-     Persian       0.33      0.60      0.43         5
-     Pidgeot       0.00      0.00      1.00         6
-   Pidgeotto       0.00      0.00      1.00         5
-      Pidgey       0.00      0.00      1.00         3
-     Pikachu       0.17      0.20      0.18         5
-      Pinsir       0.00      0.00      1.00         7
-     Poliwag       0.60      0.43      0.50         7
-   Poliwhirl       0.14      0.33      0.20         3
-   Poliwrath       0.20      0.33      0.25         3
-      Ponyta       0.00      0.00      1.00         5
-     Porygon       0.14      0.17      0.15         6
-    Primeape       0.00      0.00      1.00         7
-     Psyduck       0.50      0.50      0.50         6
-      Raichu       0.00      0.00      1.00         6
-    Rapidash       0.00      0.00      1.00         6
-    Raticate       0.00      0.00      1.00         6
-     Rattata       0.29      0.40      0.33         5
-      Rhydon       0.00      0.00      1.00         5
-     Rhyhorn       0.20      0.33      0.25         6
-   Sandshrew       0.17      0.33      0.22         3
-   Sandslash       0.25      0.18      0.21        11
-     Scyther       0.00      0.00      1.00         6
-      Seadra       0.00      0.00      1.00         4
-     Seaking       0.20      0.22      0.21         9
-        Seel       1.00      0.00      0.00         5
-    Shellder       0.00      0.00      1.00         5
-     Slowbro       0.50      0.20      0.29         5
-    Slowpoke       0.00      0.00      1.00         8
-     Snorlax       0.17      0.25      0.20         4
-     Spearow       0.00      0.00      1.00         3
-    Squirtle       0.00      0.00      1.00         8
-     Starmie       0.33      0.50      0.40         6
-      Staryu       0.00      0.00      1.00         8
-     Tangela       0.40      0.25      0.31         8
-      Tauros       0.00      0.00      1.00         5
-   Tentacool       0.17      0.33      0.22         3
-  Tentacruel       0.00      0.00      1.00         4
-    Vaporeon       0.00      0.00      1.00         7
-    Venomoth       0.00      0.00      1.00         3
-     Venonat       0.43      0.43      0.43         7
-    Venusaur       0.00      0.00      1.00        12
-  Victreebel       0.00      0.00      1.00         5
-   Vileplume       0.00      0.00      1.00         6
-     Voltorb       0.50      0.44      0.47         9
-      Vulpix       0.00      0.00      1.00         1
-   Wartortle       0.00      0.00      1.00         4
-      Weedle       0.00      0.00      1.00         3
-  Weepinbell       0.00      0.00      1.00         7
-     Weezing       0.27      0.43      0.33         7
-  Wigglytuff       0.00      0.00      1.00         8
-      Zapdos       0.00      0.00      1.00         6
-       Zubat       0.25      0.20      0.22         5
+         ...        ...       ...       ...       ...
 
     accuracy                           0.13       764
    macro avg       0.12      0.13      0.75       764
 weighted avg       0.13      0.13      0.74       764
 ```
 
-**Oh no.**
+**Oh no.** Look at all of those Pokémon where our classifier got 0.0 precision & 0.0 recall, but they all get an F-1 of
+1.0! 
 
-<!--
-    Joke: "The Mankey's paw has granted our wish"
--->
+What is going on!? Well, let's take a look at the formulae for the metrics in this classification report:
+
+$$ \textrm{precision} = \frac{\textrm{true positive}}{\textrm{true positive} + \textrm{false positive}} $$
+
+$$ \textrm{recall} = \frac{\textrm{true positive}}{\textrm{true positive} + \textrm{false negative}} $$
+
+$$ \textrm{F-1} = \frac{2 \cdot \textrm{precision} \cdot \textrm{recall}}{\textrm{precision} + \textrm{recall}} $$
+
+There are three different places here where a division by zero can occur: 
+
+- in precision, if `true positive + false positive = 0` (the classifier made no positive predictions
+  for the class)
+- in recall, if `true positive + false negative = 0` (there are no truly positive examples of the class
+  in the dataset)
+- in F-1, if `precision = recall = 0` (the classifier has made a nonzero number of exclusively incorrect predictions)
+
+In the first 2 cases, there is an interesting discussion to be had about how to interpret the zero-division case. I
+argued in this Pokemon classification exercise that it makes sense to treat them as 1.0, but I can definitely understand
+treating them as "undefined" or maybe even 0.0. But think about that third case; if precision and recall are both 0.0...
+why on earth would F-1 be anything other than 0.0? Especially if `zero_division=1.0`, which means that a) there *were*
+gold-labeled positive examples, b) the classifier *did* classify a nonzero number of examples as positive for the class,
+and c) there is exactly zero overlap between those two sets.
+
+Essentially, in Scikit-Learn 1.3.0, the `zero_division` parameter was turned into a kind of
+[Mankey](https://bulbapedia.bulbagarden.net/wiki/Mankey_(Pok%C3%A9mon))'s
+[paw](https://en.wiktionary.org/wiki/monkey%27s_paw) that determines the behavior of *all*
+zero-division anywhere in the process of calculating F1. This leads to the totally nonsensical behavior, such as giving
+an F1 of 100% to a classifier that gets literally every example wrong:
+
+```
+>>> sklearn.metrics.f1_score([0, 1, 0], [1, 0, 1], zero_division=1.0)
+1.0
+```
+
+but only when classes are represented in both the predictions and the gold-labeled data:
+
+```
+>>> print(sklearn.metrics.classification_report([1, 1, 1], [0, 0, 0], zero_division=1.0))
+              precision    recall  f1-score   support
+
+           0       0.00      1.00      0.00       0.0
+           1       1.00      0.00      0.00       3.0
+
+    accuracy                           1.00       3.0
+   macro avg       0.50      0.50      0.00       3.0
+weighted avg       1.00      0.00      0.00       3.0
+```
+
+because a nonzero recall *or* (=xor) precision means that $$ \textrm{recall} \cdot \textrm{precision} \neq 0 $$, and
+therefore the last stage of calculating F-1 involves no division by zero, and so F-1 is just boring old 0.0.
