@@ -22,13 +22,21 @@
           <img src="{{site.logo | relative_url}}" alt="Logo" />
         {% endif %}
 
-	<p>Find me on:</p>
-
+        <p>Find me on:</p>
         <ul>
           <li><a href="mailto:connor.bo@gmail.com"><strong>Email</strong></a></li>
           <li><a href="https://github.com/boyleconnor"><strong>GitHub</strong></a></li>
           <li><a href="https://www.linkedin.com/in/connor-boyle-a5902b138/"><strong>LinkedIn</strong></a></li>
           <li><a href="https://huggingface.co/connorboyle"><strong>HuggingFace</strong></a></li>
+        </ul>
+
+        <p>Posts:</p>
+        <ul>
+          {% for post in site.posts %}
+            <li>
+              <a href="{{ post.url }}">{{ post.title }}</a>
+            </li>
+          {% endfor %}
         </ul>
       </header>
       <section>
