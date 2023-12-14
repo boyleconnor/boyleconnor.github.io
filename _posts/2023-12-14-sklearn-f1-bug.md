@@ -43,7 +43,7 @@ to revert to Scikit-Learn 1.2.2, or use `zero_division=0.0` if possible, while b
 parameter change will affect precision, recall, & F-1 (see below for an explainer on the purpose and function of
 the `zero_division` parameter).
 
-The problem is that F1 for an individual class is getting calculated as `1.0` or `np.nan` when precision & recall are
+The problem is that F-1 for an individual class is getting calculated as `1.0` or `np.nan` when precision & recall are
 both `0.0` (which is *not* the desired behavior for the `zero_division` parameter).
 
 ## A classification problem
@@ -605,8 +605,8 @@ and c) there is exactly zero overlap between those two sets.
 Essentially, in Scikit-Learn 1.3.0, the `zero_division` parameter was turned into a kind of
 [Mankey](https://bulbapedia.bulbagarden.net/wiki/Mankey_(Pok%C3%A9mon))'s
 [paw](https://en.wiktionary.org/wiki/monkey%27s_paw) that determines the behavior of *all*
-zero-division anywhere in the process of calculating F1. This leads to the totally nonsensical behavior, such as giving
-an F1 of 100% to a classifier that gets literally every example wrong:
+zero-division anywhere in the process of calculating F-1. This leads to the totally nonsensical behavior, such as giving
+an F-1 of 100% to a classifier that gets literally every example wrong:
 
 ```
 >>> sklearn.metrics.f1_score([0, 1, 0], [1, 0, 1], zero_division=1.0)
