@@ -627,5 +627,5 @@ but only when classes are represented in both the predictions and the gold-label
 weighted avg       1.00      0.00      0.00       3.0
 ```
 
-because a nonzero recall *or* (=xor) precision means that $$ \textrm{recall} \cdot \textrm{precision} \neq 0 $$, and
+because a nonzero recall *or* (=xor) precision means that $$ \textrm{recall} + \textrm{precision} \neq 0 $$, and
 therefore the last stage of calculating F-1 involves no division by zero, and so F-1 is just boring old 0.0.
