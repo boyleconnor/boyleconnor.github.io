@@ -1,4 +1,7 @@
-# Scikit-Learn's F-1 calculator is broken
+---
+title: "Scikit-Learn's F-1 calculator is broken"
+author: "Connor Boyle"
+---
 
 TL;DR: if you are using scikit-learn 1.3.X and use `f1_score()` or `classification_report()` and the
 parameter `zero_division` is set to anything other than `0.0` or `"warn"`, then there's a very good chance that the
