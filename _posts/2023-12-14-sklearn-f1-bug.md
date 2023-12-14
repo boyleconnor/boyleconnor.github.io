@@ -3,39 +3,37 @@ title: "Scikit-Learn's F-1 calculator is broken"
 author: "Connor Boyle"
 ---
 
-TL;DR: if you are using scikit-learn 1.3.X and use `f1_score()` or `classification_report()` and the
-parameter `zero_division` is set to anything other than `0.0` or `"warn"`, then there's a very good chance that the
-output of that function is wrong (possibly by any amount up to 100%, depending on the number of classes in your
+TL;DR: if you are using scikit-learn 1.3.X and
+use [`f1_score()`](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.f1_score.html)
+or [`classification_report()`](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.classification_report.html)
+and the parameter `zero_division` is set to anything other than `0.0` or `"warn"`, then there's a very good chance that
+the output of that function is wrong (possibly by any amount up to 100%, depending on the number of classes in your
 dataset). E.g.:
 
-```
+<pre>
 >>> sklearn.__version__
 '1.3.0'
 >>> sklearn.metrics.f1_score(list(range(104)), list(range(100)) + [101, 102, 103, 104], average='macro', zero_division=1.0)
-0.9809523809523809
->>> # (^incorrect)
-```
+<b>0.9809523809523809</b>  <i># incorrect</i>
+</pre>
 
 compare to (the exact same expression):
 
-```
+<pre>
 >>> sklearn.__version__
 '1.2.2'
 >>> sklearn.metrics.f1_score(list(range(104)), list(range(100)) + [101, 102, 103, 104], average='macro', zero_division=1.0)
-0.9523809523809523
->>> # (^correct)
-```
+<b>0.9523809523809523</b>  <i># correct</i>
+</pre>
 
 The bug also affects the just-introduced `zero_division=np.nan`:
 
-```
+<pre>
 >>> sklearn.metrics.f1_score([0, 1], [1, 0], average='macro', zero_division=np.nan)
-nan
->>> # (^should be 0.0)
+<b>nan</b>  <i># should be 0.0</i>
 >>> sklearn.metrics.f1_score([0, 1, 2], [1, 0, 2], average='macro', zero_division=np.nan)
-1.0
->>> # (^should be ~0.67)
-```
+<b>1.0</b>  <i># should be ~0.67</i>
+</pre>
 
 Both myself and the Scikit-Learn maintainers consider the behavior in 1.3.X to be incorrect. While a
 [pull request](https://github.com/scikit-learn/scikit-learn/pull/27577) to fix this behavior was just merged, the fix
