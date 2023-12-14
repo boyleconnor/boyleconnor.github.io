@@ -3,12 +3,12 @@ title: "Scikit-Learn's F-1 calculator is broken"
 author: "Connor Boyle"
 ---
 
-TL;DR: if you are using scikit-learn 1.3.X and
+**TL;DR:** if you are using scikit-learn 1.3.X and
 use [`f1_score()`](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.f1_score.html)
 or [`classification_report()`](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.classification_report.html)
-and the parameter `zero_division` is set to anything other than `0.0` or `"warn"`, then there's a very good chance that
-the output of that function is wrong (possibly by any amount up to 100%, depending on the number of classes in your
-dataset). E.g.:
+with the argument `zero_division=1.0` or `zero_division=np.nan`, then there's a chance that the output of that function
+is wrong (possibly by any amount up to 100%, depending on the number of classes in your
+dataset). E.g. for `zero_division=1.0`:
 
 <pre>
 >>> sklearn.__version__
@@ -17,7 +17,7 @@ dataset). E.g.:
 <b>0.9809523809523809</b>  <i># incorrect</i>
 </pre>
 
-compare to (the exact same expression):
+compare to (the exact same expression in an earlier version of Scikit-Learn):
 
 <pre>
 >>> sklearn.__version__
@@ -26,7 +26,8 @@ compare to (the exact same expression):
 <b>0.9523809523809523</b>  <i># correct</i>
 </pre>
 
-The bug also affects the just-introduced `zero_division=np.nan`:
+Similar cases for `zero_division=np.nan` (which was introduced in 1.3.0, so I can't directly compare to the output in
+1.2.2):
 
 <pre>
 >>> sklearn.metrics.f1_score([0, 1], [1, 0], average='macro', zero_division=np.nan)
@@ -41,6 +42,9 @@ has not yet shipped on any released version of Scikit-Learn. Therefore, the easi
 to revert to Scikit-Learn 1.2.2, or use `zero_division=0.0` if possible, while being careful to understand how this
 parameter change will affect precision, recall, & F-1 (see below for an explainer on the purpose and function of
 the `zero_division` parameter).
+
+The problem is that F1 for an individual class is getting calculated as `1.0` or `np.nan` when precision & recall are
+both `0.0` (which is *not* the desired behavior for the `zero_division` parameter).
 
 ## A classification problem
 
