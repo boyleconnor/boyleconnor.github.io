@@ -1,5 +1,12 @@
-![Photo of me at Point Defiance Park in Tacoma, Washington](images/connor_at_point_defiance.jpeg)
+<div class="img-wrapper">
 
+<img alt="Photo of me" src="images/connor_at_point_defiance.jpeg">
+
+<i>Me at Point Defiance Park in Tacoma, Washington</i>
+
+</div>
+
+<br/>
 
 I am Connor Boyle, a former research programmer at [Information Sciences Institute][17]
 and a recently-graduated M.S. student in Computational Linguistics at the
