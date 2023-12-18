@@ -13,7 +13,7 @@ dataset). E.g. for `zero_division=1.0`:
 <pre>
 >>> sklearn.__version__
 '1.3.0'
->>> sklearn.metrics.f1_score(list(range(104)), list(range(100)) + [101, 102, 103, 104], average='macro', zero_division=1.0)
+>>> sklearn.metrics.f1_score(y_true=list(range(104)), y_pred=list(range(100)) + [101, 102, 103, 104], average='macro', zero_division=1.0)
 <b>0.9809523809523809</b>  <i># incorrect</i>
 </pre>
 
@@ -22,7 +22,7 @@ compare to (the exact same expression in an earlier version of Scikit-Learn):
 <pre>
 >>> sklearn.__version__
 '1.2.2'
->>> sklearn.metrics.f1_score(list(range(104)), list(range(100)) + [101, 102, 103, 104], average='macro', zero_division=1.0)
+>>> sklearn.metrics.f1_score(y_true=list(range(104)), y_pred=list(range(100)) + [101, 102, 103, 104], average='macro', zero_division=1.0)
 <b>0.9523809523809523</b>  <i># correct</i>
 </pre>
 
