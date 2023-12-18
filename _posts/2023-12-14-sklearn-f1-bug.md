@@ -48,13 +48,13 @@ both `0.0` (which is *not* the desired behavior for the `zero_division` paramete
 
 ## How did this happen?
 
-Let's take a look at the formulae for the metrics in this classification report:
+Let's take a look at some formulae for classification metrics:
 
 $$ \textrm{precision} = \frac{\textrm{true positive}}{\textrm{true positive} + \textrm{false positive}} $$
 
 $$ \textrm{recall} = \frac{\textrm{true positive}}{\textrm{true positive} + \textrm{false negative}} $$
 
-$$ \textrm{F-1} = \frac{2 \cdot \textrm{precision} \cdot \textrm{recall}}{\textrm{precision} + \textrm{recall}} $$
+$$ \textrm{F}_1 = \frac{2 \cdot \textrm{precision} \cdot \textrm{recall}}{\textrm{precision} + \textrm{recall}} $$
 
 There are three different places here where a division by zero can occur:
 
@@ -125,7 +125,7 @@ their classifier is completely missing every single example of a few classes!
 Ideally, any machine learning practitioner probably *should* notice this bug well before a classifier is put into
 production or reporting results in a submitted journal paper. On the other hand, you really would not expect the
 definition of F-1 to change from one version of Scikit-Learn to the next! While just about any programmer should be able
-to implement an F-1 calculator in very little time, most of us prefer to just import Scikit-Learn *specifically* to
+to implement an F-1 calculator in very little time, most of us prefer to just import Scikit-Learn's *specifically* to
 avoid gotcha edge cases like this one.
 
 ## What should I do now?
