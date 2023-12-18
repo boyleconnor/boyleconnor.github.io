@@ -145,6 +145,10 @@ Any call using `zero_division=1.0` can be fixed by reverting to Scikit-Learn ver
 parameter `zero_division=np.nan` did not exist in Scikit-Learn 1.2.2, and I don't believe there is any easy way to
 replicate it.
 
+<hr />
+
+**Footnotes:**
+
 [^1]: A completely wrong classifier can also get an F-1 score of 0.0 in Scikit-Learn 1.3.X, for example: 
     ```
     >>> print(sklearn.metrics.classification_report(y_true=[0, 0, 0], y_pred=[1, 1, 1], zero_division=1.0))
