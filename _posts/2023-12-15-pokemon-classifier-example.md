@@ -1,50 +1,6 @@
 ---
-title: "Scikit-Learn's F-1 calculator is broken"
-author: "Connor Boyle"
+published: false
 ---
-
-**TL;DR:** if you are using scikit-learn 1.3.X and
-use [`f1_score()`](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.f1_score.html)
-or [`classification_report()`](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.classification_report.html)
-with the argument `zero_division=1.0` or `zero_division=np.nan`, then there's a chance that the output of that function
-is wrong (possibly by any amount up to 100%, depending on the number of classes in your
-dataset). E.g. for `zero_division=1.0`:
-
-<pre>
->>> sklearn.__version__
-'1.3.0'
->>> sklearn.metrics.f1_score(list(range(104)), list(range(100)) + [101, 102, 103, 104], average='macro', zero_division=1.0)
-<b>0.9809523809523809</b>  <i># incorrect</i>
-</pre>
-
-compare to (the exact same expression in an earlier version of Scikit-Learn):
-
-<pre>
->>> sklearn.__version__
-'1.2.2'
->>> sklearn.metrics.f1_score(list(range(104)), list(range(100)) + [101, 102, 103, 104], average='macro', zero_division=1.0)
-<b>0.9523809523809523</b>  <i># correct</i>
-</pre>
-
-Similar cases for `zero_division=np.nan` (which was introduced in 1.3.0, so I can't directly compare to the output in
-1.2.2):
-
-<pre>
->>> sklearn.metrics.f1_score([0, 1], [1, 0], average='macro', zero_division=np.nan)
-<b>nan</b>  <i># should be 0.0</i>
->>> sklearn.metrics.f1_score([0, 1, 2], [1, 0, 2], average='macro', zero_division=np.nan)
-<b>1.0</b>  <i># should be ~0.67</i>
-</pre>
-
-Both myself and the Scikit-Learn maintainers consider the behavior in 1.3.X to be incorrect. While a
-[pull request](https://github.com/scikit-learn/scikit-learn/pull/27577) to fix this behavior was just merged, the fix
-has not yet shipped on any released version of Scikit-Learn. Therefore, the easiest solution to this specific problem is
-to revert to Scikit-Learn 1.2.2, or use `zero_division=0.0` if possible, while being careful to understand how this
-parameter change will affect precision, recall, & F-1 (see below for an explainer on the purpose and function of
-the `zero_division` parameter).
-
-The problem is that F-1 for an individual class is getting calculated as `1.0` or `np.nan` when precision & recall are
-both `0.0` (which is *not* the desired behavior for the `zero_division` parameter).
 
 ## A classification problem
 
@@ -577,7 +533,7 @@ weighted avg       0.13      0.13      0.74       764
 ```
 
 **Oh no.** Look at all of those Pokémon where our classifier got 0.0 precision & 0.0 recall, but they all get an F-1 of
-1.0! 
+1.0!
 
 What is going on!? Well, let's take a look at the formulae for the metrics in this classification report:
 
@@ -587,7 +543,7 @@ $$ \textrm{recall} = \frac{\textrm{true positive}}{\textrm{true positive} + \tex
 
 $$ \textrm{F-1} = \frac{2 \cdot \textrm{precision} \cdot \textrm{recall}}{\textrm{precision} + \textrm{recall}} $$
 
-There are three different places here where a division by zero can occur: 
+There are three different places here where a division by zero can occur:
 
 - in precision, if `true positive + false positive = 0` (the classifier made no positive predictions
   for the class)
