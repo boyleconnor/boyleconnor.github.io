@@ -6,7 +6,7 @@ author: "Connor Boyle"
 **TL;DR:** if you are using scikit-learn 1.3.X and
 use [`f1_score()`](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.f1_score.html)
 or [`classification_report()`](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.classification_report.html)
-with the argument `zero_division=1.0` or `zero_division=np.nan`, then there's a chance that the output of that function
+with the argument `zero_division=1.0` or `zero_division=np.nan`[^1], then there's a chance that the output of that function
 is wrong (possibly by any amount up to 100%, depending on the number of classes in your
 dataset). E.g. for `zero_division=1.0`:
 
@@ -85,7 +85,7 @@ the `zero_division` parameter.
 However, in Scikit-Learn 1.3.0, the `zero_division` parameter was turned into a kind
 of [monkey's paw](https://en.wiktionary.org/wiki/monkey%27s_paw) that defines the behavior of *any* division-by-zero
 that happens to occur during the calculation of an F-1 score, leading to the bizarre scenario where a 100% wrong
-classifier can get an F-1 score of 100%:[^1]
+classifier can get an F-1 score of 100%:[^2]
 
 ```
 >>> sklearn.__version__
@@ -134,7 +134,7 @@ If your project:
 
 - is using, has used, or may have used any Scikit-Learn version starting with 1.3.0 (released 2023-06-30)
 - contains any call to `classification_report()`, `f1_score()`, or `fbeta_score()`, and
-- that call contains the parameter `zero_division=1.0` or `zero_division=0.0`
+- that call contains the parameter `zero_division=1.0` or `zero_division=np.nan`
 
 it may have been affected by this bug. To determine if any particular F-1 score calculation was impacted by this bug,
 first change that F-1 score calculation to a `classification_report()` if possible. If any class in that classification
@@ -149,7 +149,9 @@ replicate it.
 
 **Footnotes:**
 
-[^1]: A completely wrong classifier can also get an F-1 score of 0.0 in Scikit-Learn 1.3.X, for example: 
+[^1]: In this post, `np.nan` refers to `numpy.nan`
+
+[^2]: A completely wrong classifier can also get an F-1 score of 0.0 in Scikit-Learn 1.3.X, for example: 
     ```
     >>> print(sklearn.metrics.classification_report(y_true=[0, 0, 0], y_pred=[1, 1, 1], zero_division=1.0))
                   precision    recall  f1-score   support
