@@ -78,7 +78,9 @@ what the correct behavior should be:
 
 For F-1, however, the "division by zero" case is not interesting or controversial in any way. If a classifier has
 achieved a recall of 0.0 (all negative predictions are false) *and* a precision of 0.0 (all positive predictions are
-false), I don't think any reasonable person would disagree what the F-1 score should be: 0.0.
+false), I don't think any reasonable person would disagree what the F-1 score should be: 0.0. Indeed, this is exactly
+how Scikit-Learn calculated F-1 right up to (and including) version 1.2.2, regardless of the value of
+the `zero_division` parameter.
 
 However, in Scikit-Learn 1.3.0, the `zero_division` parameter was turned into a kind
 of [monkey's paw](https://en.wiktionary.org/wiki/monkey%27s_paw) that defines the behavior of *any* division-by-zero
@@ -120,14 +122,28 @@ conceivably really safety-critical things. Imagine a researcher at an autonomous
 vision system is performing really well at recognizing all categories of objects & entities on the road. But actually,
 their classifier is completely missing every single example of a few classes!
 
-In any scenario that I can imagine, it would reflect at least somewhat poorly on any machine learning practitioner who
-allowed this bug to go unnoticed all the way into putting a classifier into production. On the other hand, you really
-would not expect the definition of F-1 to change from one version of Scikit-Learn to the next! So, I have a hard time
-blaming anyone for missing this bug.
+Ideally, any machine learning practitioner probably *should* notice this bug well before a classifier is put into
+production or reporting results in a submitted journal paper. On the other hand, you really would not expect the
+definition of F-1 to change from one version of Scikit-Learn to the next! While just about any programmer should be able
+to implement an F-1 calculator in very little time, most of us prefer to just import Scikit-Learn *specifically* to
+avoid gotcha edge cases like this one.
 
 ## What should I do now?
 
-TODO: finish this
+If your project:
+
+- is using, has used, or may have used any Scikit-Learn version starting with 1.3.0 (released 2023-06-30)
+- contains any call to `classification_report()`, `f1_score()`, or `fbeta_score()`, and
+- that call contains the parameter `zero_division=1.0` or `zero_division=0.0`
+
+it may have been affected by this bug. To determine if any particular F-1 score calculation was impacted by this bug,
+first change that F-1 score calculation to a `classification_report()` if possible. If any class in that classification
+report contains a precision of `0.0`, a recall of `0.0`, and an f1-score of `1.0` or `nan`, then the F-1 score for this
+classifier has been calculated incorrectly.
+
+Any call using `zero_division=1.0` can be fixed by reverting to Scikit-Learn version 1.2.2. Unfortunately, the
+parameter `zero_division=np.nan` did not exist in Scikit-Learn 1.2.2, and I don't believe there is any easy way to
+replicate it.
 
 [^1]: A completely wrong classifier can also get an F-1 score of 0.0 in Scikit-Learn 1.3.X, for example: 
     ```
