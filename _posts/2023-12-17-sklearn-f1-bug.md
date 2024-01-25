@@ -36,12 +36,15 @@ Similar cases for `zero_division=np.nan` (which was introduced in 1.3.0, so I ca
 <b>1.0</b>  <i># should be ~0.67</i>
 </pre>
 
-Both myself and the Scikit-Learn maintainers consider the behavior in 1.3.X to be incorrect. While a
+Both myself and the Scikit-Learn maintainers consider the behavior in 1.3.X to be incorrect. ~~While a
 [pull request](https://github.com/scikit-learn/scikit-learn/pull/27577) to fix this behavior was just merged, the fix
 has not yet shipped on any released version of Scikit-Learn. Therefore, the easiest solution to this specific problem is
 to revert to Scikit-Learn 1.2.2, or use `zero_division=0.0` if possible, while being careful to understand how this
 parameter change will affect precision, recall, & F-1 (see below for an explainer on the purpose and function of
-the `zero_division` parameter).
+the `zero_division` parameter).~~
+
+(**EDIT 2024-01-24**: Scikit-Learn 1.4.0 has been released as of a week ago and contains a fix for this bug. Go and
+update now!)
 
 The problem is that F-1 for an individual class is getting calculated as `1.0` or `np.nan` when precision & recall are
 both `0.0` (which is *not* the desired behavior for the `zero_division` parameter).
@@ -141,9 +144,11 @@ first change that F-1 score calculation to a `classification_report()` if possib
 report contains a precision of `0.0`, a recall of `0.0`, and an f1-score of `1.0` or `nan`, then the F-1 score for this
 classifier has been calculated incorrectly.
 
-Any call using `zero_division=1.0` can be fixed by reverting to Scikit-Learn version 1.2.2. Unfortunately, the
+~~Any call using `zero_division=1.0` can be fixed by reverting to Scikit-Learn version 1.2.2. Unfortunately, the
 parameter `zero_division=np.nan` did not exist in Scikit-Learn 1.2.2, and I don't believe there is any easy way to
-replicate it.
+replicate it.~~
+
+(**EDIT 2024-01-24**: Scikit-Learn 1.4.0 has been released, and you should update to it ASAP!)
 
 <hr />
 
