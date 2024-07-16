@@ -9,7 +9,7 @@
 <br/>
 
 I am Connor Boyle, a former research programmer at [Information Sciences Institute][17]
-and a recently-graduated M.S. student in Computational Linguistics at the
+and former M.S. student in Computational Linguistics at the
 University of Washington. At ISI, I worked under Marjorie Freedman on the [LESTAT][18]
 project. At UW, I've worked with [Tao Yu](https://taoyds.github.io/)
 as part of [Noah's Ark](https://noahs-ark.github.io/). I have also worked
