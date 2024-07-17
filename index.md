@@ -1,8 +1,8 @@
 <div class="img-wrapper">
 
-<img alt="Photo of me" src="images/connor_at_point_defiance.jpeg">
+<img alt="Photo of me" src="images/connor_on_poo_poo_point.jpg">
 
-<i>Me at Point Defiance Park in Tacoma, Washington</i>
+<i>Me at Chirico Point, near Issaquah, Washington</i>
 
 </div>
 
