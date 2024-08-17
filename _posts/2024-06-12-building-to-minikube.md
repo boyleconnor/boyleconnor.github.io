@@ -8,7 +8,8 @@ cluster. I assumed (incorrectly) that I could build a Docker image on the host m
 available to Minikube. However, this is not true, because Minikube has its own Docker daemon, inside of its own virtual
 machine (which, if your set-up is like mine, is itself running in a container on top of the host's Docker daemon). While
 there *is* an easy and simple method that allows building a Docker image and pushing directly to your Minikube
-cluster's Docker daemon, I don't believe it is well-documented anywhere on the public web.
+cluster's Docker daemon, I don't believe it is well-documented anywhere on the public web, so I thought I would write my
+own walkthrough.
 
 The following walkthrough assumes that you have a running Minikube cluster and have installed `kubectl`.
 
@@ -46,7 +47,8 @@ export MINIKUBE_ACTIVE_DOCKERD="profile-name"
 # eval $(minikube -p profile-name docker-env)
 ```
 
-Export these values to your current terminal's environment by running the command in the last line of the output, i.e.:
+Export these values to your current terminal's environment by running the command described in the last line of the
+output, i.e.:
 
 ```commandline
 eval $(minikube -p profile-name docker-env)
@@ -68,7 +70,7 @@ registry.k8s.io/kube-proxy                         v1.30.0                      
 ...
 ```
 
-your output should similarly contain several images from the Kubernetes official repo.
+your output should similarly contain several images from the Kubernetes official registry.
 
 **NOTE: the above will have to be re-run every time you open a new terminal, open a new SSH session, restart the computer,
 etc.**
@@ -122,8 +124,8 @@ NAME                                             READY   STATUS                 
 my-python-pod                                    0/1     Completed                2 (13s ago)      15s
 ```
 
-(the pod's `STATUS` may eventually change to `CrashLoopBackOff`; I think because Kubernetes does not expect pods to
-execute one command and then terminate)
+(the pod's `STATUS` may eventually change to `CrashLoopBackOff`; I think this is because Kubernetes does not expect pods
+to execute one command and then terminate)
 
 You can see that the pod has completed the command described in the Dockerfile's CMD directive by running:
 
