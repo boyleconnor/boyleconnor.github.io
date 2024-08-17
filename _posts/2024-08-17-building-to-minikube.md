@@ -1,5 +1,5 @@
 ---
-title: "How to push a Docker image directly to Minikube"
+title: "How to build & push a Docker image directly to Minikube"
 author: "Connor Boyle"
 ---
 
