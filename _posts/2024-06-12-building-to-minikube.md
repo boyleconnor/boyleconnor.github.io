@@ -3,13 +3,13 @@ title: "How to push a Docker image directly to Minikube"
 author: "Connor Boyle"
 ---
 
-The other day, I was attempting to run a service on my Knative set up, which was itself running on top of a Minikube
-cluster. I assumed (incorrectly) that I could build a Docker image on the host machine and it would be automatically
-available to Minikube. However, this is not true, because Minikube has its own Docker daemon, inside of its own virtual
-machine (which, if your set-up is like mine, is itself running in a container on top of the host's Docker daemon). While
-there *is* an easy and simple method that allows building a Docker image and pushing directly to your Minikube
-cluster's Docker daemon, I don't believe it is well-documented anywhere on the public web, so I thought I would write my
-own walkthrough.
+The other day, I was attempting to develop a Knative service and try it out on my local development set-up, which was
+a Minikube cluster. I assumed (incorrectly) that I could build a Docker image on the host machine and it would be
+automatically available to Minikube. However, this is not true, because Minikube has its own Docker daemon, inside of
+its own virtual machine (which, if your set-up is like mine, is itself running in a container on top of the host's
+Docker daemon). While there *is* an easy and simple method that allows building a Docker image and pushing directly to
+your Minikube cluster's Docker daemon, I don't believe it is well-documented anywhere on the public web, so I thought I
+would write my own walkthrough.
 
 The following walkthrough assumes that you have a running Minikube cluster and have installed `kubectl`.
 
