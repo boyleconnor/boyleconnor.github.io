@@ -3,6 +3,11 @@
 
 @import "{{ site.theme }}";
 
+a:hover, a:focus {
+    font-weight: inherit;
+    text-decoration: underline;
+}
+
 @media (min-width: 1000px) {
   .wrapper {
     width: 1000px;
