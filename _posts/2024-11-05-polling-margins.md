@@ -55,7 +55,7 @@ Here's what the actual polls[^4] in real world Wisconsin done by real pollsters 
 <img alt="Wisconsin observed polling margins" src="/images/poll_margins/wisconsin_observed_margins.png">
 
 An average poll of Wisconsin has one candidate beating the other (some of them Trump beating Harris, some of them vice
-versa) by about 2% (or 0.203, as shown in the graph). While the trendline is not terribly strong, we do find that the
+versa) by about 2% (or ~~0.203~~ 0.0203, as shown in the graph). While the trendline is not terribly strong, we do find that the
 absolute margin of a poll goes down as sample size goes up, as we'd expect if the race were truly tied.
 
 And here's a simulation of what those polls *could* look like in an alternate universe where pollsters perfectly
