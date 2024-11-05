@@ -18,9 +18,9 @@ hammer looking for a nail).
 This little project was made possible thanks to Nate Silver's blog, Silver Bulletin, collecting and distributing poll
 results. Here are the data files containing the poll results that I used 
 for [Wisconsin](https://static.dwcdn.net/data/PMbPp.csv), [Pennsylvania](https://static.dwcdn.net/data/uyZgi.csv),
-and [New Hampshire](https://static.dwcdn.net/data/nLq7K.csv).[^4]
+and [New Hampshire](https://static.dwcdn.net/data/nLq7K.csv).[^1]
 
-## Simulating Wisconsin polls[^1]
+## Simulating Wisconsin polls[^2]
 
 If the exact same number of likely or registered voters (depending on which poll) plan to vote for Harris as Trump, we
 can easily simulate the act of surveying them by flipping a coin. Even more easily, we can run the random number
@@ -49,7 +49,7 @@ and the mean absolute margin for this universe of polls is:
 $$ \frac{0.05 + 0.02 + 0.03}{3} \approx 0.03333333333 $$
 
 
-Here's what the actual polls[^2] in real world Wisconsin done by real pollsters look like:
+Here's what the actual polls[^4] in real world Wisconsin done by real pollsters look like:
 
 <img alt="Wisconsin observed polling margins" src="/images/poll_margins/wisconsin_observed_margins.png">
 
@@ -135,20 +135,23 @@ therefore should be very *un*certain about the outcome of this race.
 
 **Footnotes:**
 
-[^1]: I used a Jupyter notebook to simulate these polls, which can be found [here](https://github.com/boyleconnor/poll-margins-2024/blob/main/simulate_polls.ipynb)
-[^2]: This whole post rests on the very big assumption that the polls on Silver Bulletin represent well the full
-      distribution of seemingly "good" polls. Since Silver is complaining about and drawing attention to herding among
-      pollsters, I have assumed that he himself is not consciously or unconsciously selecting specifically for closer
-      polls in swing states. But technically, he or his blog staff could be responsible for 100% of the apparent
-      herding if they are doing this!
+[^1]: I had to delete a row representing a YouGov poll from each of the Wisconsin and Pennsylvania data files. For some
+      reason, these polls had their sample sizes listed as 0, which is both logically impossible and impossible to
+      simulate. I don't believe they could have made a significant difference; each one being only one of 134
+      (Pennsylvania) or 100 (Wisconsin) polls, these YouGov polls could have at most impacted the observed or simulated
+      mean absolute margin by a 100th of their corresponding values.
+
+[^2]: I used a Jupyter notebook to simulate these polls, which can be found [here](https://github.com/boyleconnor/poll-margins-2024/blob/main/simulate_polls.ipynb)
+
 [^3]: In order to simplify the problem, I transformed each poll into a strictly binary poll consisting of only those
       respondents who responded that they intended to vote for Trump or Harris. This introduces some numerical error,
       since we have to infer the number of strict Trump-&-Harris-only respondents by dividing by the sum of the
       percentages for each candidate. Out of generosity to the quality of the polls, we consistently round up the
       inferred sample size to the nearest whole number.
-[^4]: I had to delete a row representing a YouGov poll from each of the Wisconsin and Pennsylvania data files. For some
-      reason, these polls had their sample sizes listed as 0, which is both logically impossible and impossible to
-      simulate. I don't believe they could have made a significant difference; each one being only one of 134
-      (Pennsylvania) or 100 (Wisconsin) polls, these YouGov polls could have at most impacted the observed or simulated
-      mean absolute margin by a 100th of their corresponding values.
+
+[^4]: This whole post rests on the assumption that the polls on Silver Bulletin represent well the full
+      distribution of seemingly "good" polls. Since Silver is complaining about and drawing attention to herding among
+      pollsters, I have assumed that he himself is not consciously or unconsciously selecting specifically for closer
+      polls in swing states. But technically, he or his blog staff could be responsible for 100% of the apparent
+      herding if they are doing this!
 
