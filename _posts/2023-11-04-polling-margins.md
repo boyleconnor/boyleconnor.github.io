@@ -9,11 +9,11 @@ releasing their findings as-is, they're worried they'll look uniquely wrong, and
 with the crowd. Nate Silver infers this from the numbers that the pollsters themselves report; the margins in several
 swing states are too consistently close to be plausible, even if the election truly is a dead tie among decided voters.
 
-Other than mentioning the binomial distribution and some probabilities, Silver doesn't "show his work" with much detail.
-Since probability math can be really easy to get wrong (at least for me!), I thought I'd take a stab at trying the brute
-force option of simulating polls in a hypothetical dead tie, i.e. exactly 50% of decided voters plan to vote for each of
-the major candidates, Harris & Trump (I also happen to be a computer programmer by hobby and profession, so maybe I'm
-just a hammer looking for a nail).
+Other than a passing mention of the binomial distribution, Silver doesn't "show his work" with much detail. Since
+probability math can be really easy to get wrong (at least for me!), I thought I'd take a stab at trying the brute force
+option of simulating polls in a hypothetical dead tie, i.e. exactly 50% of decided voters plan to vote for each of the
+major candidates, Harris & Trump (I also happen to be a computer programmer by hobby and profession, so maybe I'm just a
+hammer looking for a nail).
 
 This little project was made possible thanks to Nate Silver's blog, Silver Bulletin, collecting and distributing poll
 results. Here are the data files containing the poll results that I used 
