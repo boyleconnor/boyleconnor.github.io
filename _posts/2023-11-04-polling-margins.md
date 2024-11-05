@@ -18,9 +18,9 @@ hammer looking for a nail).
 This little project was made possible thanks to Nate Silver's blog, Silver Bulletin, collecting and distributing poll
 results. Here are the data files containing the poll results that I used 
 for [Wisconsin](https://static.dwcdn.net/data/PMbPp.csv), [Pennsylvania](https://static.dwcdn.net/data/uyZgi.csv),
-and [New Hampshire](https://static.dwcdn.net/data/nLq7K.csv)
+and [New Hampshire](https://static.dwcdn.net/data/nLq7K.csv).
 
-## Simulating Wisconsin polls
+## Simulating Wisconsin polls[^1]
 
 If the exact same number of likely or registered voters (depending on which poll) plan to vote for Harris as Trump, we
 can easily simulate the act of surveying them by flipping a coin. Even more easily, we can run the random number
@@ -48,7 +48,7 @@ and the mean absolute margin for this universe of polls is:
 $$ \frac{0.05 + 0.02 + 0.03}{3} \approx 0.03333333333 $$
 
 
-Here's what the actual polls in real world Wisconsin done by real pollsters look like:
+Here's what the actual polls[^2] in real world Wisconsin done by real pollsters look like:
 
 <img alt="Wisconsin observed polling margins" src="/images/poll_margins/wisconsin_observed_margins.png">
 
@@ -88,6 +88,10 @@ convinced, look at this graph of simulations with varied shares for the candidat
 So, assuming the presidential race in Wisconsin isn't *exactly* tied, the poll margins would look even more suspiciously
 close to zero than they already do!
 
+With all that in mind, it seems hard to deny that there could be some systemic bias distorting these polls away from
+being true random samples of their populations--possibly herding driven by an aversion to publishing too strong of a
+poll for one or more of the candidates.
+
 ## Some other states' poll margins
 
 Nate Silver noted that he observed herding in Pennsylvania as well, and our simulations reveal as much as well:
@@ -125,4 +129,15 @@ conclude that they constitute evidence of interference, cheating, voter suppress
 pollsters nearly *all* agreed that these swing states were *right* on the margin. However, the high level of agreement
 between pollsters is not evidence that we know what the results will be, but rather that we can't trust these polls, and
 therefore should be very *un*certain about the outcome of this race.
+
+<hr />
+
+**Footnotes:**
+
+[^1]: I used a Jupyter notebook to simulate these polls, which can be found [here](https://github.com/boyleconnor/poll-margins-2024/blob/main/simulate_polls.ipynb)
+[^2]: This whole post rests on the very big assumption that the polls on Silver Bulletin represent well the full
+      distribution of seemingly "good" polls. Since Silver is complaining about and drawing attention to herding among
+      pollsters, I have assumed that he himself is not consciously or unconsciously selecting specifically for closer
+      polls in swing states. But technically, he or his blog staff could be responsible for 100% of the apparent
+      herding if they are doing this!
 
