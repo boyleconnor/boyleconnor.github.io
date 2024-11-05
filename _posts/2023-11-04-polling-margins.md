@@ -4,10 +4,11 @@ author: "Connor Boyle"
 ---
 
 I just read Nate Silver's [blog post](https://www.natesilver.net/p/theres-more-herding-in-swing-state), where he writes
-that pollsters are systematically altering their data to roughly match the average of existing polls. Rather than
-releasing their findings as-is, they're worried they'll look uniquely wrong, and so they're settling for blending in
-with the crowd. Nate Silver infers this from the numbers that the pollsters themselves report; the margins in several
-swing states are too consistently close to be plausible, even if the election truly is a dead tie among decided voters.
+that pollsters are systematically altering their data to roughly match the average of existing polls. According to
+Silver, rather than releasing their findings as-is, they're worried they'll look uniquely wrong, and so they're settling
+for blending in with the crowd. He infers this bias from the numbers that the pollsters themselves report; the margins
+in several swing states are too consistently close to be plausible, even if the election truly is a dead tie among
+decided voters.
 
 Other than a passing mention of the binomial distribution, Silver doesn't "show his work" with much detail. Since
 probability math can be really easy to get wrong (at least for me!), I thought I'd take a stab at trying the brute force
@@ -53,7 +54,7 @@ Here's what the actual polls[^4] in real world Wisconsin done by real pollsters 
 
 <img alt="Wisconsin observed polling margins" src="/images/poll_margins/wisconsin_observed_margins.png">
 
-The average poll of Wisconsin has one candidate beating the other (some of them Trump beating Harris, some of them vice
+An average poll of Wisconsin has one candidate beating the other (some of them Trump beating Harris, some of them vice
 versa) by about 2% (or 0.203, as shown in the graph). While the trendline is not terribly strong, we do find that the
 absolute margin of a poll goes down as sample size goes up, as we'd expect if the race were truly tied.
 
@@ -113,14 +114,17 @@ right to acquit New Hampshire pollsters of the herding accusation.
 ## How is this happening?
 
 To be clear, no individual poll--even one with a very close margin--is by itself indicative of foul play by the pollster
-who created it. Rather, the aggregation of poll results for each of multiple swing states indicate systemic problems. I
+who created it. Rather, the aggregation of poll results for each of multiple swing states indicate systemic bias. I
 know almost nothing about political polls, but I recently read a great book about systemic problems in modern science
 called [Science Fictions](https://www.sciencefictions.org/p/book) and it seems like there's a *lot* of ways to
 manipulate your data--even without intending to or realizing that you are doing it.
 
 It's totally plausible to me that pollsters are just focusing a lot more scrutiny on any result that shows a strong
 swing toward one candidate or another; maybe they're more likely to throw out outliers or keep collecting more data if
-they start to see "too" wide of a margin.
+they start to see "too" wide of a margin. These hypotheses may sound very foolish to people more familiar with how
+polls are typically conducted; I'll stop speculating before I make too much of a fool of myself, but suffice it to say
+there are a lot of ways for data to get distorted in any field of science and I would expect no less of political
+polling.
 
 ## Why does this Matter?
 
