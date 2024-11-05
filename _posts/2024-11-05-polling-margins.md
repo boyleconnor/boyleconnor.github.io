@@ -50,7 +50,7 @@ and the mean absolute margin for this universe of polls is:
 $$ \frac{0.05 + 0.02 + 0.03}{3} \approx 0.03333333333 $$
 
 
-Here's what the actual polls[^4] in real world Wisconsin done by real pollsters look like:
+Here's what the actual polls[^4] in real world Wisconsin done by real pollsters look like:[^5]
 
 <img alt="Wisconsin observed polling margins" src="/images/poll_margins/wisconsin_observed_margins.png">
 
@@ -158,4 +158,10 @@ therefore should be very *un*certain about the outcome of this race.
       pollsters, I have assumed that he himself is not consciously or unconsciously selecting specifically for closer
       polls in swing states. But technically, he or his blog staff could be responsible for 100% of the apparent
       herding if they are doing this!
+
+[^5]: This figure in a previous version of this blog post had the observed mean absolute margin at completely the wrong
+      value (just in the chart, not in the text of the blog post). A helpful
+      Redditor [pointed this out](https://www.reddit.com/r/fivethirtyeight/comments/1gk3ers/comment/lvlgf3n/) to me and
+      I corrected this around 2024-11-05T21:59 UTC. I show the full, transparent edit history of my entire website on
+      [this GitHub repo](https://github.com/boyleconnor/boyleconnor.github.io).
 
