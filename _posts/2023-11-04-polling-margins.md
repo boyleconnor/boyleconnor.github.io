@@ -18,7 +18,7 @@ hammer looking for a nail).
 This little project was made possible thanks to Nate Silver's blog, Silver Bulletin, collecting and distributing poll
 results. Here are the data files containing the poll results that I used 
 for [Wisconsin](https://static.dwcdn.net/data/PMbPp.csv), [Pennsylvania](https://static.dwcdn.net/data/uyZgi.csv),
-and [New Hampshire](https://static.dwcdn.net/data/nLq7K.csv).
+and [New Hampshire](https://static.dwcdn.net/data/nLq7K.csv).[^4]
 
 ## Simulating Wisconsin polls[^1]
 
@@ -27,7 +27,8 @@ can easily simulate the act of surveying them by flipping a coin. Even more easi
 generator on my computer and checking whether the output floating point number is greater than `0.5`; if it is, that's a
 Trump voter. Otherwise, that's a Harris voter.
 
-After we simulate our polls, lets extract our statistic of interest: the **mean absolute margin**. For example, if I have three polls with margins:
+After we simulate our polls, lets extract our statistic of interest: the **mean absolute margin**. For example, if I
+have three polls with margins:[^3]
 
 $$\text{Trump} \space \text{+5%}$$
 
@@ -140,4 +141,14 @@ therefore should be very *un*certain about the outcome of this race.
       pollsters, I have assumed that he himself is not consciously or unconsciously selecting specifically for closer
       polls in swing states. But technically, he or his blog staff could be responsible for 100% of the apparent
       herding if they are doing this!
+[^3]: In order to simplify the problem, I transformed each poll into a strictly binary poll consisting of only those
+      respondents who responded that they intended to vote for Trump or Harris. This introduces some numerical error,
+      since we have to infer the number of strict Trump-&-Harris-only respondents by dividing by the sum of the
+      percentages for each candidate. Out of generosity to the quality of the polls, we consistently round up the
+      inferred sample size to the nearest whole number.
+[^4]: I had to delete a row representing a YouGov poll from each of the Wisconsin and Pennsylvania data files. For some
+      reason, these polls had their sample sizes listed as 0, which is both logically impossible and impossible to
+      simulate. I don't believe they could have made a significant difference; each one being only one of 134
+      (Pennsylvania) or 100 (Wisconsin) polls, these YouGov polls could have at most impacted the observed or simulated
+      mean absolute margin by a 100th of their corresponding values.
 
