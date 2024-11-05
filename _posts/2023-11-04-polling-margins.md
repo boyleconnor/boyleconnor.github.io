@@ -88,6 +88,23 @@ convinced, look at this graph of simulations with varied shares for the candidat
 So, assuming the presidential race in Wisconsin isn't *exactly* tied, the poll margins would look even more suspiciously
 close to zero than they already do!
 
+## Some other states' poll margins
+
+Nate Silver noted that he observed herding in Pennsylvania as well, and our simulations reveal as much as well:
+
+<img alt="Universes of simulated Wisconsin polling margins with varied Harris shares" src="/images/poll_margins/pennsylvania_mam_multiverse.png">
+
+(the unnatural bias towards a tie looks even worse for Pennsylvania than it did for Wisconsin). However, the polls in
+New Hampshire apparently don't suffer from herding:
+
+<img alt="Universes of simulated Wisconsin polling margins with varied Harris shares" src="/images/poll_margins/new_hampshire_mam_multiverse.png">
+
+You can see that not only is the mean absolute margin for New Hampshire not well below (to the left) the simulation's
+distribution, it is actually far above (to the right of) it. This makes sense; New Hampshire appears to be nowhere near
+tied, with nearly all polls giving a strong Harris lead. Note that our simulations actually wouldn't be able to detect
+herding if its not occurring around a near-tie polling average; therefore all we can say is that Nate Silver *could* be
+right to acquit New Hampshire pollsters of the herding accusation.
+
 ## How is this happening?
 
 To be clear, no individual poll--even one with a very close margin--is by itself indicative of foul play by the pollster
